@@ -42,7 +42,7 @@ section .apresentation .left h1 {
     margin-bottom: 10px;
 }
 
-section .apresentation .left h1 span {
+section .apresentation .left h1 span{
     color: var(--secondary-green);
 }
 

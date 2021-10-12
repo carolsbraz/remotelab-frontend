@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+:root {
+    --main-green: #1C5B36;
+    --secondary-green: #4E7F63;
+    --text-color: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.0rem;
+    width: 85%;
+    margin: auto;
+    color: var(--text-color);
+    background: #c0c0c0;
+}
+
+html,
+body {
+    font-family: "Inter";
+}
+
+section .files{
+    display: flex;
+    height: 100vh;
+    border-radius: 10px;
+    margin-left: -30px;
+}
+
+section .files .button{
+
+    height: 99.5vh;
+    width: 300px;
+    opacity: 0.8;
+    background: #ffffff;
+    margin-left: -110px;
+    margin-right: -50px;
+    border-radius: 10px;
+
+    
+}
+section .files .button img{
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 60px;
+}
+
+section .files .button .house{
+    margin-top: 250px;
+    width: 50px;
+}
+section .files .button .programação img{
+
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+section .files .button .programação{
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+}
+section .files .button .sair{
+    margin-top: 350px;   
+    height: 30px;
+}
+section .files .right{
+
+    height: 55rem;
+    width: 300rem;
+    margin-right: -95px;
+    margin-left: 50px;
+    border-radius: 10px;
+ 
+
+}
+section .files .right .pinagem{
+    z-index:1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+section .files .right .pinagem img{
+    z-index: index 3;
+}
+section .files .right  button:hover{
+    background:#e7e7e7 ;
+}
+
+.btn-1{
+    z-index: 1;
+    position: relative;
+    padding: 2px 15px;
+    outline-color: green !important;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 300px;
+    margin-left: 120vh;
+}
+
+.btn-title1{
+   
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+section .files .right .programação{
+    height: 90vh;
+    width: 110vh;
+    background:#c9c9c9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+section .files .right .programação .number{
+    background: #b9b9b9;
+    height: 90vh;
+    width: 80px;
+    margin-left: 0px;
+    border-radius: 0px;
+}
+section .files .right .programação .area{
+margin-top: -87vh;
+margin-left: 93px;
+
+}
+section .files .right .programação .area textarea{
+    border-color: #c9c9c9;
+    background: #c9c9c9;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+section .files .right .start{
+    position: absolute;
+    margin-left: 162vh;
+    width: 218px;
+    height: 60.7rem;
+    /*left: 193vh;*/
+    top: 0px;
+    border-radius: 15px;
+    background: #c9c9c9;
+}
+section .files .right .start button{
+
+    padding: 10px 30px;
+    outline-color: green !important;
+    cursor: pointer;
+    background: #d6d6d6;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 18px;
+    line-height: 34px;
+}
+.btn-title{
+   
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+section .files .right .start .play{
+    margin-top: 350px;   
+    height: 30px;
+}

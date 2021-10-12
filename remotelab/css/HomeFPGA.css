@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+:root {
+    --main-green: #1C5B36;
+    --secondary-green: #4E7F63;
+    --text-color: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 90%;
+    margin: auto;
+    color: var(--text-color);
+}
+
+html,
+body {
+    font-family: "Inter";
+}
+
+section .files{
+    display: flex;
+    height: 100vh;
+    border-radius: 10px;
+
+    
+}
+
+section .files .button{
+
+    height: 60rem;
+    width: 300px;
+    opacity: 0.8;
+    background: #ffffff;
+    margin-left: -100px;
+    margin-right: -50px;
+    border-radius: 5px;
+
+    
+}
+
+section .files .button img{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 60px;
+}
+
+section .files .button .house{
+    margin-top: 250px;
+}
+section .files .button .programação img{
+    width: 40px;
+    height: 40px;
+    margin-left: 37px;
+    margin-top: 30px;
+
+}
+section .files .button .programação{
+    width: 5px;
+    height: 5px;
+    margin-top: 20px;
+}
+section .files .button .sair{
+    margin-top: 350px;   
+    height: 30px;
+}
+
+
+
+section .files .right{
+
+    height: 62rem;
+    width: 300rem;
+    background: #f0eeee;
+    margin-right: -95px;
+    margin-left: 50px;
+    border-radius: 5px;
+ 
+
+}
+section .files .right .information img{
+
+    position:absolute;
+    width: 120px;
+    height: 120px;
+    left: -150px;
+    top: -35px;
+    
+}
+
+section .files .right .information{
+    position: relative;
+    height: 60px;
+    top: 74px;
+    margin-right: 100px;
+    margin-left: 350px;
+
+}
+
+section .files .right button .btn-example{
+    position: absolute;
+    /* width: 222px; */
+    height: 55px;
+    color: var(--main-green);
+    outline-color:green !important;
+    cursor: pointer;
+}
+
+section .files .right .btn-example{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px; 
+    margin-left: 120vh;
+    outline-color:green !important;
+    cursor: pointer;
+
+}
+
+.btn-title{
+    margin-left: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+section .files .right .names{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 160px 50px;
+    margin-right: 40vh;
+    margin-left: 18vh;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 34px;
+}
+section .files .right .names img{
+    display: flex;
+    position: center;
+    align-items: center;
+    left: 30vh;
+    top: 34vh;
+    width: 35px;
+
+}
+/*section .files .right .names .pao{
+    display: flex;
+    align-items: center;
+ 
+}*/
+section .files .right .borda{
+    border-bottom:solid rgb(0, 0, 0) 0.4px;
+    margin-top: 20px;
+    margin-right: 42vh;
+    margin-left: 18vh;
+}
+section .files .right .arquivos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 45px;
+    margin-right: 40vh;
+    margin-left: 18vh;
+    margin-top: -80px;
+    
+}
+section .files .right .arquivos .salvo{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+section .files .right .arquivos .salvo a{
+    color: var(--text-color);
+}
+
+section .files .right .arquivos .exemplo{
+    border-bottom:solid rgb(0, 0, 0) 2px;
+}
+
+
+@media (max-width: 360px){
+    section .files .button{
+        width: 400px;
+        height: 270vh;
+        margin-left: -20px;
+
+    }
+    section .files .button .house{
+        margin-top: 250px;
+        margin-left: 20px;
+    }
+    section .files .button .programação img{
+
+        margin-left: 30px;
+        margin-top: 30px;
+    
+    }
+    section .files .button .programação{
+        margin-top: 150px;
+        margin-left: 20px;
+    }
+    section .files .button .sair{
+        margin-top: 260px;
+        margin-left: 20px; 
+
+    }
+    section .files .right {
+        width: 170vh;
+        height: 270vh;
+    }
+    section .files .right .btn-example {
+        margin-left: 90vh;
+    }
+    section .files .right .information {
+        position: relative;
+        align-items: column;
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        top: 74px;
+        margin-left: 50px;
+        font-size: 1.0em;
+    }
+    section .files .right .information img {
+        width: 65px;
+        height: 65px;
+        left: 0px;
+        top: -50px;
+    }
+    section .files .right .information h2 {
+        font-size: 1.0em;
+    }
+    section .files .right .information p {
+        font-size: 0.7em;
+    }
+
+    section .files .right .names{
+        margin-left: 1vh;
+    }
+
+    section .files .right .arquivos {
+        padding: 2px 45px;
+        margin-right: 29vh;
+        margin-left: 2px;
+        margin-top: -80px;
+
+        font-size: 0.7em;
+
+    }
+    section .files .right .btn-example {
+        margin-left: 120vh;
+    }
+}
+
+
+@media (max-width: 1440px){
+    section .files .button {
+        width: 400px;
+        height: 62rem;
+    }
+    section .files .button img{
+        margin-left: 40px;
+    }
+    section .files .button .house{
+        margin-top: 250px;
+    }
+    section .files .button .programação img{
+
+        margin-left: 40px;
+        margin-top: 30px;
+    
+    }
+    section .files .button .programação{
+        margin-top: 150px;
+    }
+    section .files .button .sair{
+        margin-top: 260px;   
+
+    }
+    section .files .right {
+        margin-right: -95px;
+        margin-left: 52px;
+    }
+    section .files .right .btn-example {
+        margin-left: 150vh;
+    }
+}
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    section .files .button {
+        margin-right: -80px;
+        margin-left: -50px;
+    }
+    section .files .button img{
+        margin-left: 34px;
+        width: 60px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    section .files .button .house{
+        margin-top: 250px;
+        margin-left: 0px;
+    }
+
+    section .files .button .programação a{
+        margin-left: -20px;
+    }
+    section .files .button .programação img{
+        margin-top: 30px;
+        margin-left: 60px;
+    }
+    section .files .right{
+        margin-left: 80px;
+    }
+    section .files .right .information {
+        position: relative;
+        align-items: column;
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        top: 100px;
+        margin-left: 50px;
+        font-size: 0.8em;
+    }
+    section .files .right .information img {
+        width: 65px;
+        height: 65px;
+        left: 0px;
+        top: -80px;
+    }
+    section .files .right .arquivos {
+
+        margin-right: 1vh;
+        margin-left: 1vh;
+
+        font-size: 18px;
+    }
+    section .files .right .btn-example {
+        margin-left: 9vh;
+        margin-top: 150px;
+    }
+    }
+    section .files .right .names {
+
+
+        margin-right: 25vh;
+        margin-left: 20px;
+        font-size: 18px;
+
+    }
+}
+
+@media (max-width: 425px) {
+    section .files .button{
+        width: 400px;
+        height: 270vh;
+        margin-left: -20px;
+
+    }
+    section .files .button .house{
+        margin-top: 250px;
+        margin-left: 20px;
+    }
+    section .files .button .programação img{
+
+        margin-left: 30px;
+        margin-top: 30px;
+    
+    }
+    section .files .button .programação{
+        margin-top: 150px;
+        margin-left: 20px;
+    }
+    section .files .button .sair{
+        margin-top: 260px;
+        margin-left: 20px; 
+
+    }
+    section .files .right {
+        width: 170vh;
+        height: 270vh;
+    }
+    section .files .right .btn-example {
+        margin-left: 90vh;
+    }
+    section .files .right .information {
+        position: relative;
+        align-items: column;
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        top: 74px;
+        margin-left: 50px;
+        font-size: 1.0em;
+    }
+    section .files .right .information img {
+        width: 65px;
+        height: 65px;
+        left: 0px;
+        top: -50px;
+    }
+    section .files .right .information h2 {
+        font-size: 1.0em;
+    }
+    section .files .right .information p {
+        font-size: 0.7em;
+    }
+
+    section .files .right .names{
+        margin-left: 1vh;
+    }
+
+    section .files .right .arquivos {
+        padding: 2px 45px;
+        margin-right: 29vh;
+        margin-left: 2px;
+        margin-top: -80px;
+
+        font-size: 0.7em;
+
+    }
+    section .files .right .btn-example {
+        margin-left: 120vh;
+    }
+}
+
+
+
+
+
+
+
