@@ -71,11 +71,14 @@ section .files .button .programação{
     height: 5px;
     margin-top: 20px;
 }
+section .files .button .trail{
+    z-index: 1;
+    margin-top: 100px;
+}
 section .files .button .sair{
-    margin-top: 350px;   
+    margin-top: 200px;   
     height: 30px;
 }
-
 
 
 section .files .right{
@@ -138,7 +141,7 @@ section .files .right .names{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 160px 50px;
+    padding: 160px 235px;
     margin-right: 40vh;
     margin-left: 18vh;
     font-family: Inter;
