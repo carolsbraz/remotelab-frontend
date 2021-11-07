@@ -1,5 +1,8 @@
 module.exports = (app) => {
-    app.use('/', (req, res) => {
-        res.sendFile("index.html", {root: './src/views/general'} )
+    app.get('/', (req, res) => {
+        res.render("index")
+    });
+    app.get('/login', (req, res) => {
+        res.render("login")
     });
 }
