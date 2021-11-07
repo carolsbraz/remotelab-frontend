@@ -36,6 +36,9 @@ section.header div.right-side svg #line-2 {
     0% {
         opacity: 0;
     }
+    15% {
+        opacity: 0;
+    }
     30% {
         opacity: 1;
     }
@@ -50,6 +53,9 @@ section.header div.right-side svg #line-3 {
 
 @keyframes line-3 {
     0% {
+        opacity: 0;
+    }
+    30% {
         opacity: 0;
     }
     45% {
@@ -67,6 +73,9 @@ section.header div.right-side svg #line-4 {
     0% {
         opacity: 0;
     }
+    45% {
+        opacity: 0;
+    }
     60% {
         opacity: 1;
     }
@@ -80,6 +89,9 @@ section.header div.right-side svg #line-5 {
 
 @keyframes line-5 {
     0% {
+        opacity: 0;
+    }
+    60% {
         opacity: 0;
     }
     85% {
@@ -112,6 +124,9 @@ section.header div.right-side svg #t-line-2 {
     0% {
         opacity: 0;
     }
+    33% {
+        opacity: 0;
+    }
     66% {
         opacity: 1;
     }
@@ -125,6 +140,9 @@ section.header div.right-side svg #t-line-3 {
 
 @keyframes t-line-3 {
     0% {
+        opacity: 0;
+    }
+    66% {
         opacity: 0;
     }
     100% {
@@ -144,5 +162,65 @@ section.header div.right-side svg #post-it {
     }
     to {
         transform: rotateZ(-5deg);
+    }
+}
+
+section.header div.right-side svg #plant-1 {
+    animation: plants 1.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+section.header div.right-side svg #plant-2 {
+    animation: plants 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+section.header div.right-side svg #plant-3 {
+    animation: plants 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+section.header div.right-side svg #plant-4 {
+    animation: plants 1.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+section.header div.right-side svg #plant-5 {
+    animation: plants 3s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+section.header div.right-side svg #plant-6 {
+    animation: plants 2.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes plants {
+    from {
+        transform: rotateZ(5deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+
+section.header div.right-side svg #pointer-clock-1 {
+    animation: clock-1 6s linear infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes clock-1 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(359deg);
     }
 }
