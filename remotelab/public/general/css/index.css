@@ -1,0 +1,133 @@
+img.back-shape{
+    width: calc(100vw - 6px);
+    position: absolute;
+    top: 450px;
+    z-index: -1000;
+}
+
+section.header{
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+}
+
+section.header div.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.header div.left-side h1{
+    color: var(--main-green);
+} 
+
+section.header div.left-side h1 span{
+    color: var(--secondary-green);
+}
+
+section.header div.left-side p{
+    margin: 15px 0;
+}
+
+section.header div.left-side a{
+    display: flex;
+    width: 260px;
+    padding: 5px 10px;
+    justify-content: space-evenly;
+    background-color: var(--main-green);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+section.header div.left-side a:hover{
+    background-color: var(--main-green-darker);
+}
+
+section.header div.right-side svg{
+    width: 500px;
+    transition: 1s;
+}
+
+section.about{
+    margin: auto;
+    width: 70%;
+}
+
+section.about div.labs{
+    display: flex;
+    margin: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about div.labs div.left-side img{
+    width: 500px;
+    margin-right: 30px;
+    transition: 1s;
+    box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+section.about div.labs div.left-side img:hover{
+    transform: translateY(-5px);
+}
+
+section.about div.labs div.right-side h2{
+    color: var(--main-green);
+    text-align: center;
+}
+
+section.about div.labs div.right-side p{
+    text-align: center;
+}
+
+section.about div.trails{
+    display: flex;
+    margin: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about div.trails div.left-side h2{
+    color: var(--main-green);
+    text-align: center;
+}
+
+section.about div.trails div.left-side p{
+    text-align: center;
+}
+
+section.about div.trails div.right-side img{
+    width: 500px;
+    margin-left: 30px;
+    transition: 1s;
+    box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+section.about div.trails div.right-side img:hover{
+    transform: translateY(-5px);
+}
+
+section.footer{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-top: 100px;
+}
+
+section.footer div.logos{
+    display: flex;
+    width: 300px;
+}
+
+section.footer div.logos img{
+    height: 110px;
+    margin-right: 50px;
+}

@@ -1,1 +1,0 @@
-const arrastar = document.getElementById('coisa')

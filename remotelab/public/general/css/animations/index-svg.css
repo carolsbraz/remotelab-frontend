@@ -1,0 +1,148 @@
+section.header div.right-side svg{
+    animation: all 2s ease-in-out infinite alternate;
+}
+
+@keyframes all {
+    from {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+section.header div.right-side svg #line-1 {
+    animation: line-1 2.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes line-1 {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #line-2 {
+    animation: line-2 2.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes line-2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+}
+
+
+section.header div.right-side svg #line-3 {
+    animation: line-3 2.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes line-3 {
+    0% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #line-4 {
+    animation: line-4 2.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes line-4 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #line-5 {
+    animation: line-5 2.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes line-5 {
+    0% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #t-line-1 {
+    animation: t-line-1 1.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes t-line-1 {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #t-line-2 {
+    animation: t-line-2 1.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes t-line-2 {
+    0% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #t-line-3 {
+    animation: t-line-3 1.5s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes t-line-3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+section.header div.right-side svg #post-it {
+    animation: post-it 2s ease-in-out infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes post-it {
+    from {
+        transform: rotateZ(5deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}

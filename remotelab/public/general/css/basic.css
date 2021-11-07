@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 70%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+html,
+body {
+    font-family: "Inter";
+}
+
+h1{
+    font-size: 3.6rem;
+}
+
+h2{
+    font-size: 3.0rem;
+}
