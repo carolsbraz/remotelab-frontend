@@ -133,7 +133,7 @@ section.header div.right-side svg #t-line-3 {
 }
 
 section.header div.right-side svg #post-it {
-    animation: post-it 2s ease-in-out infinite alternate;
+    animation: post-it 1.5s ease-in-out infinite alternate;
     transform-origin: top;
     transform-box: fill-box;
 }

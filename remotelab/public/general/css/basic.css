@@ -28,3 +28,36 @@ h1{
 h2{
     font-size: 3.0rem;
 }
+
+/*Laptop*/
+@media (max-width: 1024px) {
+    html{
+        font-size: 67.5%;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    html{
+        font-size: 65%%;
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+   
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    html{
+
+    }
+}

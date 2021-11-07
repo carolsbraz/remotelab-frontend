@@ -1,0 +1,111 @@
+/*Laptop*/
+@media (max-width: 1024px) {
+    section.header div.right-side svg{
+        width: 400px;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    img.back-shape{
+        width: 100vw;
+        top: 400px;
+    }
+    section.header{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    section.header div.left-side{
+        align-items: center;
+    }
+    section.header div.left-side p{
+        margin: 20px 0;
+    }
+    section.header div.right-side svg{
+        margin-bottom: 50px;
+    }
+    section.about div.labs{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+    section.about div.labs div.left-side img{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    section.about div.trails{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    section.about div.trails div.right-side img{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    section.footer{
+        flex-direction: column;
+        margin-top: 0;
+        text-align: center;
+    }
+    section.footer div.logos{
+        width: 50%;
+        justify-content: space-evenly;
+        margin: 30px 0;
+    }
+    section.footer div.logos img{
+        margin: 0;
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    img.back-shape{
+        top: 350px;
+    }
+    section.header div.right-side svg{
+        width: 350px;
+    }
+    section.about div.labs div.left-side img{
+        width: 340px;
+    }
+    section.about div.trails div.right-side img{
+        width: 340px;
+    }
+    section.footer div.logos{
+        width: 80%;
+        justify-content: space-evenly;
+        margin: 30px 0;
+    }
+    section.header div.left-side a{
+        padding: 0;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    section.header div.right-side svg{
+        width: 310px;
+    }
+    section.about div.labs div.left-side img{
+        width: 300px;
+    }
+    section.about div.trails div.right-side img{
+        width: 300px;
+    }
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    section.header div.right-side svg{
+        width: 270px;
+    }
+    section.about div.labs div.left-side img{
+        width: 260px;
+    }
+    section.about div.trails div.right-side img{
+        width: 269px;
+    }
+    section.footer div.logos{
+        width: 100%;
+    }
+}
