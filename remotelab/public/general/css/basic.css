@@ -29,6 +29,17 @@ h2{
     font-size: 3.0rem;
 }
 
+a{
+    margin: 20px 0 0 0;
+    color: var(--main-green);
+    transition: 1s;
+}
+
+a:hover{
+    color: var(--main-green-darker);
+    text-decoration: underline;
+}
+
 /*Laptop*/
 @media (max-width: 1024px) {
     html{

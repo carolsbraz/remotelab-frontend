@@ -37,16 +37,7 @@ section.login-area div.login-box form{
     align-items: center;
 }
 
-section.login-area div.login-box a{
-    margin: 20px 0 0 0;
-    color: var(--main-green);
-    transition: 1s;
-}
 
-section.login-area div.login-box a:hover{
-    color: var(--main-green-darker);
-    text-decoration: underline;
-}
 
 section.login-area div.login-box form input{
     margin: 20px 0 0 0;

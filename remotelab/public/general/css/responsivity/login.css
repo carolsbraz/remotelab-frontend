@@ -29,6 +29,7 @@
     section.login-area div.image-area svg #question{
         fill: white;
     }
+}
 
 /*Mobile L*/
 @media (max-width: 425px) {

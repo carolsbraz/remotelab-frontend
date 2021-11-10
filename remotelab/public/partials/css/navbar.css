@@ -1,0 +1,22 @@
+div.navbar{
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
+}
+
+div.navbar img.logo{
+    width: 70px;
+}
+
+div.navbar div.icons{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-between;
+}
