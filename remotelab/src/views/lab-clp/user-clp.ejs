@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Usuário</title>
+    <link rel="stylesheet" href="/general/css/fonts.css">
+    <link rel="stylesheet" href="/general/css/colors.css">
+    <link rel="stylesheet" href="/general/css/basic.css">
+    <link rel="stylesheet" href="/general/css/scrollbar.css">
+    <link rel="stylesheet" href="/lab-clp/css/user-clp.css">
+    <link rel="stylesheet" href="/general/css/animations/load.css">
+    <link rel="stylesheet" href="/partials/css/navbar.css">
+    <link rel="stylesheet" href="/partials/css/user-card.css">
+    <link rel="stylesheet" href="/partials/css/lab-card.css">
+    <link rel="stylesheet" href="/partials/css/table-line.css">
+</head>
+<body>
+    <section>
+        <%- include('../partials/navbar', {logo: "/lab-clp/img/logo-lab-clp.svg", link1: "#", icon1: "/general/img/icons/home-icon.svg", descricao1: "Ícone de tela inicial", link2: "#", icon2: "/general/img/icons/settings-icon.svg", descricao2: "Ícone de configuração dos dados do usuário"}) %>
+
+        <div class="data">
+            <div class="user-data">
+                <%- include('../partials/user-card', {image: "/general/img/user-image-example.png", name: "Nome do usuário", email: "email@super.ufam.edu.br"})%>
+            </div>
+            <div class="table-diagrams">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome do diagrama
+                            </th>
+                            <th>
+                                Última modificação
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('../partials/table-line', {icon: "/general/img/icons/diagram-icon.svg", iconDesc:"Ícone de diagrama", linkDiagram: "/diagram", nameDiagram: "Diagrama 1", lastDateDiagram: "30 de outubro de 2021"})%>
+                        <%- include('../partials/table-line', {icon: "/general/img/icons/diagram-icon.svg", iconDesc:"Ícone de diagrama", linkDiagram: "/diagram", nameDiagram: "Diagrama 2", lastDateDiagram: "31 de outubro de 2021"})%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>

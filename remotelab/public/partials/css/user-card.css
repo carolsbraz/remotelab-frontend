@@ -1,0 +1,17 @@
+div.user-card{
+    display: flex;
+    align-items: center;
+}
+
+div.user-card div.user-data{
+    margin-left: 20px;
+}
+
+div.user-card img{
+    width: 80px;
+    border-radius: 100%;
+}
+
+div.user-card div.user-data p{
+    margin-top: 5px;
+}

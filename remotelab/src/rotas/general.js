@@ -5,7 +5,10 @@ module.exports = (app) => {
     app.get('/login', (req, res) => {
         res.render("general/login")
     });
-    app.post('/usuario', (req, res) =>{
-        res.render("general/usuario")
+    app.post('/user', (req, res) =>{
+        res.render("general/user")
+    });
+    app.get('/user-clp', (req, res) =>{
+        res.render("lab-clp/user-clp")
     });
 }
