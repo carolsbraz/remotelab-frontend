@@ -1,0 +1,38 @@
+/*Laptop*/
+@media (max-width: 1024px) {
+    
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    
+    section div.data{
+        padding: 50px 50px 50px 50px;
+    }
+     
+    section div.labs-list{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+    
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    section div.labs-list{
+        grid-template-columns: 1fr;
+        grid-column-gap: 15px;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    section div.data{
+        padding: 30px 30px 30px 30px;
+    }
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    
+}
