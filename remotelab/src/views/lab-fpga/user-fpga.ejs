@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Usuário</title>
+    <link rel="stylesheet" href="/general/css/fonts.css">
+    <link rel="stylesheet" href="/general/css/colors.css">
+    <link rel="stylesheet" href="/general/css/basic.css">
+    <link rel="stylesheet" href="/general/css/scrollbar.css">
+    <link rel="stylesheet" href="/lab-fpga/css/user-fpga.css">
+    <link rel="stylesheet" href="/general/css/animations/load.css">
+    <link rel="stylesheet" href="/partials/css/navbar.css">
+    <link rel="stylesheet" href="/partials/css/user-card.css">
+    <link rel="stylesheet" href="/partials/css/lab-card.css">
+    <link rel="stylesheet" href="/partials/css/table-line.css">
+    <link rel="stylesheet" href="/general/css/responsivity/resp-general.css">
+    <link rel="stylesheet" href="/partials/css/resp-user-card.css">
+    <link rel="stylesheet" href="/partials/css/nav-resp.css">
+    <link rel="stylesheet" href="/lab-fpga/css/responsivity/resp-user-fpga.css">
+</head>
+<body>
+    <section>
+
+
+        <%- include('../partials/navbar', {logo: "/lab-fpga/img/logo-lab-fpga.svg", link1: "#", 
+        icon1: "/general/img/icons/home-icon.svg", descricao1: "Ícone de tela inicial", 
+        link2: "/Trail-intro-fpga", icon2: "/general/img/icons/trail-intro.svg", 
+        descricao2: "Ícone de trilha de aprendizagem"}) %>
+
+
+        <div class="data">
+            <div class="user-data" data-anime="up">
+                <%- include('../partials/user-card', {image: "/general/img/user-image-example.png", name: "Nome do usuário", email: "email@super.ufam.edu.br"})%>
+            </div>
+            <div class="table-diagrams" data-anime="up">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome do diagrama
+                            </th>
+                            <th>
+                                Última modificação
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('../partials/table-line', {icon: "/general/img/icons/program-icon.svg", iconDesc:"Ícone da codificação", linkDiagram: "/program", nameDiagram: "Código 1", lastDateDiagram: "30/10/2021"})%>
+                        <%- include('../partials/table-line', {icon: "/general/img/icons/program-icon.svg", iconDesc:"Ícone da codificação", linkDiagram: "/program", nameDiagram: "Código 2", lastDateDiagram: "31/10/2021"})%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/general/js/animations/load.js"></script>
+    </section>
+    
+</body>
+</html>

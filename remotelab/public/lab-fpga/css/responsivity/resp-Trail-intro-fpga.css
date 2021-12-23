@@ -1,0 +1,66 @@
+/*Laptop*/
+@media (max-width: 1024px) {
+    section.header div.right svg{
+        width: 400px;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+    section.header{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+    }
+    section.header div.left{
+        align-items: center;
+    }
+    section.header div.left p{
+        margin: 20px 0;
+    }
+    section.header div.left a{
+        align-items: center;
+        margin-left: 20px;
+    }
+    section.header div.right svg{
+        margin-bottom: 50px;
+    }
+
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+
+    section.header div.right svg{
+        width: 350px;
+    }
+    section.about div.labs div.left img{
+        width: 340px;
+    }
+    section.about div.trails div.right img{
+        width: 340px;
+    }
+    section.header div.left a{
+        padding: 0;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    section.header div.right svg{
+        width: 310px;
+    }
+
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    section.header div.right svg{
+        width: 270px;
+    }
+
+}
+
