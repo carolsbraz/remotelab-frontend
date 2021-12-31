@@ -111,8 +111,8 @@ module.exports = (app) => {
     });
     app.get('/clp-data', (req, res) =>{
         res.render("lab-clp/clp-data")
-    });
-    app.post('/delete-user', (req, res) =>{
+    });                                                                                                                          
+    app.post('/delete-user', ()=>{
         console.log("hi")
         console.log(req.id)
         axios.delete(`${url}/user/${req.body.id}`).then((response) => {
@@ -120,6 +120,13 @@ module.exports = (app) => {
             console.log(response.data)
         }).catch((err) => {
             res.send({ status: err });
-        });;
+        });
     });
+    app.get('/user-fpga', (req, res) => {
+        res.render("lab-fpga/user-fpga")
+    });
+    app.get('/Trail-intro-fpga', (req, res) => {
+        res.render("lab-fpga/Trail-intro-fpga")
+    });
+    
 }
