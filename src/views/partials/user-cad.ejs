@@ -1,0 +1,22 @@
+<div class="ca-user-data">
+    <h2>Cadastro de usuário</h2>
+    <form action="/cad-new-user" method="post" class="add-user">
+        <div class="texts">
+            <input type="text" name="name" id="txt-nome-user" placeholder="Insira o nome do usuário">
+            <input type="text" name="username" id="txt-username-user" placeholder="Insira o username do usuário">
+            <input type="text" name="email" id="txt-email-user" placeholder="Insira o email do usuário">
+        </div>
+        <div class="texts">
+            <input type="text" name="password" id="txt-senha-user" placeholder="Insira a senha do usuário">
+            <select name="role" id="txt-user-type">
+                <option value="USER">Usuário comum</option>
+                <option value="ADMIN">Administrador</option>
+            </select>
+        </div>
+        <div class="button">
+            <!-- <button type="submit" class="btn-delete"><img src="/general/img/icons/delete-icon.svg" alt="ìcone de deletar">Deletar</button>-->
+            <button type="submit"><img src="/general/img/icons/save-icon.svg" alt="ìcone de atualizar">Salvar</button>
+        </div>
+    </form>
+    
+</div>

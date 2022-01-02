@@ -19,7 +19,7 @@ section div.data table tr {
 
 section div.data table tr td:first-child {
     text-align: left;
-    width: 60%;
+    width: 30%;
 }
 
 section div.data table img{

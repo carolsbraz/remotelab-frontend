@@ -1,25 +1,12 @@
-section{
-    display: flex;
-}
 
-section div.data{
-    padding: 50px 50px 50px 150px;
-    width: 100%;
-}
 
 section div.data h2{
     color: var(--main-green);
 }
 
-form.add-user div.texts{
-    display: flex;
-    justify-content: space-between;
-}
-
-
 form.add-user div.button{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 form.add-user input{
@@ -63,11 +50,11 @@ form.add-user input#txt-nome-user:focus{
 }
 
 form.add-user input#txt-email-user{
-    background: url(/general/img/icons/person-icon.svg) no-repeat scroll 15px 15px;
+    background: url(/general/img/icons/email-icon.svg) no-repeat scroll 15px 15px;
 }
 
 form.add-user input#txt-email-user:focus{
-    background: url(/general/img/icons/person-green-icon.svg) no-repeat scroll 15px 15px;
+    background: url(/general/img/icons/email-icon-green.svg) no-repeat scroll 15px 15px;
 }
 
 form.add-user input#txt-senha-user{
@@ -79,14 +66,18 @@ form.add-user input#txt-senha-user:focus{
 }
 
 form.add-user select#txt-user-type{
-    background: url(/general/img/icons/person-icon.svg) no-repeat scroll 15px 15px;
+    background: url(/general/img/icons/group-icon.svg) no-repeat scroll 15px 15px;
 }
 
+form.add-user select#txt-user-type:active{
+    background: url(/general/img/icons/group-icon-green.svg) no-repeat scroll 15px 15px;
+    border-color: var(--main-green);
+}
 
 form.add-user button{
     margin: 20px 0 0 0;
     width: 200px;
-    background-color: var(--main-green);
+    background-color: var(--secondary-green);
     padding: 15px;
     border: solid;
     border-width: 1px;
@@ -102,6 +93,13 @@ form.add-user button{
 }
 
 form.add-user button:hover{
-    background-color:var(--main-green-darker);
+    background-color:var(--secondary-green-darker);
 }
 
+form.add-user button.btn-delete{
+    background-color: rgb(194, 53, 53);
+}
+
+form.add-user button.btn-delete:hover{
+    background-color: rgb(126, 33, 33);
+}
