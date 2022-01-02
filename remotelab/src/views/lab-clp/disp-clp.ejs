@@ -1,0 +1,58 @@
+<div class="dados-clp">
+    <h3>Dados do dispositivo</h3>
+    <form action="/clp-data" method="post" class="disp-clp">
+        
+        <input type="text" name="txt-name-disp" id="txt-name-disp" placeholder="Nome do dispositivo">
+        
+        <select name="txt-type" id="txt-type">
+            <option value="in-dig">Entrada digital</option>
+            <option value="in-ana">Entrada analógica</option>
+            <option value="out">Saída</option>
+        </select>
+
+        <div class="variant">
+            <div class="type-in-dig" id="type-in-dig">
+                <select name="txt-id-in-dig" id="txt-id-in-dig">
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                </select>
+                <select name="txt-sensor-in-dig" id="txt-sensor-in-dig">
+                    <option value="gen">Genérico</option>
+                    <option value="esp-1">Sensor de temperatura: DS18b20</option>
+                </select>
+            </div>
+            <div class="type-in-ana" id="type-in-ana">
+                <select name="txt-id-in-ana" id="txt-id-in-ana">
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="A3">A3</option>
+                    <option value="A4">A4</option>
+                </select>
+                <select name="txt-sensor-in-ana" id="txt-sensor-in-ana">
+                    <option value="gen">Genérico</option>
+                </select>
+            </div>
+            <div class="type-out" id="type-out">
+               
+                    <select name="txt-id-out" id="txt-id-out">
+                        <option value="Y1">Y1</option>
+                        <option value="Y2">Y2</option>
+                        <option value="Y3">Y3</option>
+                    </select>
+                    <select name="txt-sensor-out" id="txt-sensor-out">
+                        <option value="gen">Genérico</option>
+                    </select>
+               
+            </div>
+        </div>
+
+        <input type="text" name="txt-description-disp" id="txt-description-disp" placeholder="Insira a descrição do dispositivo"> 
+        <div class="buttons">
+            <button type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+
+<script src="/lab-clp/js/disp-clp.js"></script>

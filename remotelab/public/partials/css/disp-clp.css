@@ -1,0 +1,173 @@
+div.dados-clp,
+div.variant,
+div.type-in-dig,
+div.type-in-ana,
+div.type-out{
+    width: 100%;
+}
+
+div.variant{
+    position: relative;
+    height: 160px;
+}
+
+div.type-in-dig,
+div.type-in-ana,
+div.type-out{
+    position: absolute;
+}
+
+div.type-in-ana,
+div.type-out{
+    visibility: hidden;
+}
+
+div.dados-clp form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    text-align: center;
+}
+
+form.disp-clp input{
+    margin: 20px 0 0 0;
+    padding: 20px;
+    padding-left: 50px;
+    border-width: 1px;
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border-style: solid;
+    transition: .5s;
+    width: 100%;
+}
+
+form.disp-clp select{
+    margin: 20px 0 0 0;
+    padding: 20px;
+    padding-left: 50px;
+    border-width: 1px;
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border-style: solid;
+    transition: .5s;
+    width: 100%;
+    background-color: white;
+}
+
+
+form.disp-clp select#txt-type{
+    background: url(/general/img/icons/in-out-icon.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp select#txt-type:active{
+    background: url(/general/img/icons/in-out-green-icon.svg) no-repeat scroll 15px 15px;
+    border-color: var(--main-green);
+}
+
+form.disp-clp button{
+    margin: 20px 0 0 0;
+    width: 200px;
+    background-color: var(--main-green);
+    padding: 15px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+
+form.disp-clp button:hover{
+    background-color:var(--main-green-darker);
+}
+
+form.disp-clp input:focus{
+    border-color: var(--main-green);
+}
+
+form.disp-clp input#txt-name-disp{
+    background: url(/general/img/icons/name-disp-icon.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp input#txt-name-disp:focus{
+    background: url(/general/img/icons/name-disp-green-icon.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp select#txt-id-in-dig,
+form.disp-clp select#txt-id-in-ana,
+form.disp-clp select#txt-id-out{
+    background: url(/general/img/icons/id-icon.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp select#txt-id-in-dig:active,
+form.disp-clp select#txt-id-in-ana:active,
+form.disp-clp select#txt-id-out:active{
+    background: url(/general/img/icons/id-green-icon.svg) no-repeat scroll 15px 15px;
+    border-color: var(--main-green);
+}
+
+form.disp-clp select#txt-sensor-in-dig,
+form.disp-clp select#txt-sensor-in-ana,
+form.disp-clp select#txt-sensor-out{
+    background: url(/general/img/icons/board-icon-grey.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp select#txt-sensor-in-dig:active,
+form.disp-clp select#txt-sensor-in-ana:active,
+form.disp-clp select#txt-sensor-out:active{
+    background: url(/general/img/icons/board-icon-green.svg) no-repeat scroll 15px 15px;
+    border-color: var(--main-green);
+}
+
+form.disp-clp input#txt-description-disp{
+    background: url(/general/img/icons/description-icon.svg) no-repeat scroll 15px 15px;
+}
+
+form.disp-clp input#txt-description-disp:focus{
+    background: url(/general/img/icons/description-green-icon.svg) no-repeat scroll 15px 15px;
+}
+
+div.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.buttons button.delete-disp{
+    background-color: rgb(185, 46, 46);
+}
+
+div.buttons button.delete-disp:hover{
+    background-color: rgb(138, 24, 24);
+}
+
+div.btn-add-disp{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+div.btn-add-disp a{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    width: 200px;
+    justify-content: space-evenly;
+    border-color: var(--main-green);
+    text-decoration: none;
+    border-radius: 5px;
+}

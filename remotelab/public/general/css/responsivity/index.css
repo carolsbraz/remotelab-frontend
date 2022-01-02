@@ -55,6 +55,10 @@
     section.footer div.logos img{
         margin: 0;
     }
+    section.header div.left a{
+        align-items: center;
+        margin: auto;
+    }
 }
 
 /*Mobile L*/

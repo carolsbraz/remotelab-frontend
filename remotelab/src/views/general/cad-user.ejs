@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Usuário</title>
+    <link rel="stylesheet" href="/general/css/fonts.css">
+    <link rel="stylesheet" href="/general/css/colors.css">
+    <link rel="stylesheet" href="/general/css/basic.css">
+    <link rel="stylesheet" href="/general/css/scrollbar.css">
+    <link rel="stylesheet" href="/general/css/cad-user.css">
+    <link rel="stylesheet" href="/lab-clp/css/clp-crud.css">
+    <link rel="stylesheet" href="/general/css/animations/load.css">
+    <link rel="stylesheet" href="/partials/css/navbar.css">
+    <link rel="stylesheet" href="/partials/css/user-card.css">
+    <link rel="stylesheet" href="/partials/css/lab-card.css">
+    <link rel="stylesheet" href="/partials/css/table-line.css">
+    <link rel="stylesheet" href="/general/css/responsivity/resp-general.css">
+    <link rel="stylesheet" href="/partials/css/resp-user-card.css">
+    <link rel="stylesheet" href="/partials/css/nav-resp.css">
+    <link rel="stylesheet" href="/lab-clp/css/clp-cad-initial.css">
+    <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
+    <link rel="stylesheet" href="/general/css/modal.css">
+</head>
+<body>
+    <section>
+        <%- include('../partials/modal')%>
+
+        <%- include('../partials/navbar', {logo: "/lab-clp/img/logo-lab-clp.svg", link1: "#", icon1: "", descricao1: "", link2: "#", icon2:"", descricao2: "", class1:"", class2:"" }) %>
+
+        <div class="data">
+            <div class="up-data-clp-cad">
+                <div class="user-data" data-anime="up">
+                    <%- include('../partials/user-card', {image: "/general/img/user-image-example.png", name: "Nome do administrador", email: "adm@super.ufam.edu.br"})%>
+                </div>
+                <div class="add-btn" data-anime="up">
+                    <a href="#abrirModalCadastroUser"> <img src="/general/img/icons/add-icon.svg" alt="">Novo usuário</a>
+                </div>
+            </div>
+            <div class="table-clps" data-anime="up">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Nome do usuário
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Tipo de usuário
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% for (user of users){%>
+
+                                <%- include('../partials/table-line-user', {icon: "/general/img/icons/person-icon.svg", iconDesc:"Ícone de pessoa", linkDiagram: "#abrirModalCadastroUser", nameDiagram: user.name, email: user.email, typeUser: user.role, id: user._id})%>
+                        
+                        <% } %>
+
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/general/js/animations/load.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            function edit(botao) {
+                console.log(botao)
+                var tableData = botao.closest('tr').querySelectorAll("td");
+                console.log(tableData[0].textContent.trim());
+
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", `/delete-user`, true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                    id: tableData[0].textContent.trim()
+                }));
+                
+            }
+           
+        </script>
+    </section>
+    
+</body>
+</html>
