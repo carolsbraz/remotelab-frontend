@@ -1,0 +1,102 @@
+.navbar > #nav-check {
+    display: none;
+}
+
+.navbar > .nav-btn {
+    display: none;
+}
+
+/*Laptop*/
+@media (max-width: 1024px) {
+    
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    div.navbar{
+        width: 100vw;
+        height: 100px;
+        flex-direction: row;
+        position: initial;
+        align-items: center;
+    }
+
+    div.navbar div.icons{
+        flex-direction: row;
+        width: 100px;
+        align-items: center;
+    }
+
+    div.navbar div.exit{
+        height: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    div.navbar div.exit a{
+        margin: 0;
+    }
+
+
+    div.navbar div.icons a{
+        margin: 0;
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    .navbar > .nav-btn {
+      display: inline-block;
+      
+    }
+    .navbar > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgb(250, 250, 250);
+      
+    }
+    .navbar > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(129, 129, 129);
+    }
+    div.navbar div.icons {
+      position: absolute;
+      justify-content: center;
+      width: 100%;
+      background-color: rgb(250, 250, 250);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 100px;
+      left: 0px;
+      z-index: 1000;
+    }
+    div.navbar div.icons > a {
+      display: block;
+      margin: 10px;
+    }
+
+    .navbar > #nav-check:not(:checked) ~ .icons {
+      height: 0px;
+    }
+    .navbar > #nav-check:checked ~ .icons {
+      height: 100px;
+    }
+
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    
+}

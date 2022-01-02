@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Usuário</title>
+    <link rel="stylesheet" href="/general/css/fonts.css">
+    <link rel="stylesheet" href="/general/css/colors.css">
+    <link rel="stylesheet" href="/general/css/basic.css">
+    <link rel="stylesheet" href="/general/css/scrollbar.css">
+    <link rel="stylesheet" href="/general/css/cad-user.css">
+    <link rel="stylesheet" href="/general/css/animations/load.css">
+    <link rel="stylesheet" href="/partials/css/navbar.css">
+    <link rel="stylesheet" href="/partials/css/user-card.css">
+    <link rel="stylesheet" href="/partials/css/lab-card.css">
+    <link rel="stylesheet" href="/partials/css/table-line-for-dispositivo.css">
+    <link rel="stylesheet" href="/general/css/responsivity/resp-general.css">
+    <link rel="stylesheet" href="/partials/css/resp-user-card.css">
+    <link rel="stylesheet" href="/partials/css/nav-resp.css">
+    <link rel="stylesheet" href="/lab-clp/css/clp-cad-initial.css">
+    <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
+    <link rel="stylesheet" href="/general/css/modal.css">
+
+    <!-- Link para ícone da navbar responsiva-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section>
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg", link1: "#", icon1: "/general/img/icons/home-icon.svg", descricao1: "Ícone de tela inicial", link2: "#", icon2: "/general/img/icons/settings-icon.svg", descricao2: "Ícone de configuração dos dados do usuário", class1: "active", class2: ""}) %>
+
+        <div class="data">
+            <h2>Cadastro de usuário</h2>
+            <form action="/clp-data" method="post" class="add-user">
+                <div class="texts">
+                    <input type="text" name="txt-nome-user" id="txt-nome-user" placeholder="Insira o nome do usuário">
+                    <input type="text" name="txt-email-user" id="txt-email-user" placeholder="Insira o email do usuário">
+                </div>
+                <div class="texts">
+                    <input type="text" name="txt-senha-user" id="txt-senha-user" placeholder="Insira a senha do usuário">
+                    <select name="txt-user-type" id="txt-user-type">
+                        <option value="comum">Usuário comum</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button type="submit"><img src="/general/img/icons/edit-icon.svg" alt="ìcone de login">Atualizar</button>
+                </div>
+            </form>
+            
+        </div>
+        
+    </section>
+    
+</body>
+</html>

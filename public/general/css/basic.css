@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 70%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+html,
+body {
+    font-family: "Inter";
+}
+
+h1{
+    font-size: 3.6rem;
+}
+
+h2{
+    font-size: 3.0rem;
+}
+
+a{
+    margin: 20px 0 0 0;
+    color: var(--main-green);
+    transition: 1s;
+    font-weight: 500;
+}
+
+a:hover{
+    color: var(--main-green-darker);
+}
+
+/*Laptop*/
+@media (max-width: 1024px) {
+    html{
+        font-size: 67.5%;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    html{
+        font-size: 65%;
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+   
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    
+}

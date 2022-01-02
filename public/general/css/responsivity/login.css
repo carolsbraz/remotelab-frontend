@@ -1,0 +1,64 @@
+/*Laptop*/
+@media (max-width: 1024px) {
+    section.login-area div.image-area{
+        margin-left: 20px;
+    }
+    section.login-area div.image-area svg{
+        width: 350px;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    img.back-index{
+        object-fit: cover;
+        width: 40%;
+    }
+    section.login-area{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    section.login-area div.login-box{
+        margin-top: 50px;
+    }
+    section.login-area div.image-area{
+        margin-left: 0;
+    }
+    section.login-area div.image-area svg #question{
+        fill: white;
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    section.login-area div.login-box{
+       width: 350px;
+    }
+    section.login-area div.login-box form input{
+        width: 250px;
+    }
+    section.login-area div.image-area svg{
+        width: 300px;
+    }
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    section.login-area div.login-box{
+        width: 300px;
+        padding: 30px;
+     }
+     section.login-area div.login-box form input{
+         width: 200px;
+     }
+     section.login-area div.image-area svg{
+         width: 250px;
+     }
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    
+}
