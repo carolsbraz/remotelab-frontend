@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input type="email" name="loginId" id="loginId" placeholder="Insira seu endereço de email">
+        <input type="password" name="password" id="password" placeholder="Insira sua senha">
+        <a href="#">Esqueceu sua senha?</a>
+        <button onclick="login()"><img src="/general/img/icons/enter-icon.svg" alt="ìcone de login">Fazer login</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function getUser(){
+    axios.get(`/user/session`).then((user) => {      
+        console.log("logado: ", user.data)
+    }).catch((err) => {
+        console.log("deu problema na sessão")
+    });;
+}
+function login(){
+    const user = {
+        "loginId": "caroline@gmail.com",
+        "password": "Snhalegal_11"
+    };
+    axios.post(`/auth/login`, user, {
+    headers: {
+        "Content-Type": "application/json"        
+    }
+    }).then((response) => {
+    console.log("fez login")
+    res.send({ status: response });
+    getUser()
+}).catch((err) => {
+    console.log('failed login', err);
+    res.send({ status: err });
+});
+}
+
+    </script>
+</body>
+</html>

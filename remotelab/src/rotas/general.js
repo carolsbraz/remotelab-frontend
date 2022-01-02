@@ -1,5 +1,7 @@
+
+
 module.exports = (app) => {
-    const url = "http://34.95.137.51:3333"
+    const url = "https://34.95.137.51:3333"
 
     const axios = require('axios');
 
@@ -7,6 +9,14 @@ module.exports = (app) => {
         withCredentials: true,
         baseURL: url
      })
+
+    function getUser(){
+        instance.get(`/user/session`).then((user) => {      
+            console.log("logado: ", user.data)
+        }).catch((err) => {
+            console.log("deu problema na sessão")
+        });;
+    }
     
     app.get('/', (req, res) => {
         res.render("general/index")
@@ -15,12 +25,15 @@ module.exports = (app) => {
         res.render("general/login")
         
     });
+
     app.post('/login-user', (req, res) => {
         console.log('New login');
+        
         const user = {
             "loginId": req.body.loginId,
             "password": req.body.password
         };
+        
         instance.post(`/auth/login`, user, {
             headers: {
                 "Content-Type": "application/json"        
@@ -28,27 +41,15 @@ module.exports = (app) => {
         }).then((response) => {
 
             console.log("fez login")
-
-            axios.get(`${url}/user/session`).then((logged) => {
-                
-                console.log("logado", logged.data)
-    
-                axios.get(`${url}/user/`).then((response) => {
-                    res.render('general/cad-user', { users: response.data, logged: logged.data } );
-                }).catch((err) => {
-                    res.send({ status: err });
-                });;
-    
-            }).catch((err) => {
-                console.log("deu problema na sessão")
-                res.send({ status: err });
-            });;
+            res.send({ status: response });
+            getUser()
 
         }).catch((err) => {
             console.log('failed login', err);
             res.send({ status: err });
         });
     });
+
     app.post('/user', (req, res) =>{
         res.render("general/user")
     });
