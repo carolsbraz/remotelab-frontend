@@ -16,38 +16,7 @@ module.exports = (app) => {
         
     });
     app.post('/login-user', (req, res) => {
-        console.log('New login');
-        const user = {
-            "loginId": req.body.loginId,
-            "password": req.body.password
-        };
-        instance.post(`/auth/login`, user, {
-            headers: {
-                "Content-Type": "application/json"        
-            }
-        }).then((response) => {
-
-            console.log("fez login")
-
-            axios.get(`${url}/user/session`).then((logged) => {
-                
-                console.log("logado", logged.data)
-    
-                axios.get(`${url}/user/`).then((response) => {
-                    res.render('general/cad-user', { users: response.data, logged: logged.data } );
-                }).catch((err) => {
-                    res.send({ status: err });
-                });;
-    
-            }).catch((err) => {
-                console.log("deu problema na sessão")
-                res.send({ status: err });
-            });;
-
-        }).catch((err) => {
-            console.log('failed login', err);
-            res.send({ status: err });
-        });
+        
     });
     app.post('/user', (req, res) =>{
         res.render("general/user")
@@ -59,21 +28,11 @@ module.exports = (app) => {
         res.render("lab-clp/clp-crud")
     });
     app.get('/cad-user', (req, res) =>{
-        axios.get(`${url}/user/session/`).then((logged) => {
+                res.render('general/cad-user', { users: 
+                    "", logged: "" } );
                 
-            console.log("logado", logged.data)
-
-            axios.get(`${url}/user/`).then((response) => {
-                res.render('general/cad-user', { users: response.data, logged: logged.data } );
-                //console.log(response.data, logged.data)
-            }).catch((err) => {
-                res.send({ status: err });
-            });;
-
-        }).catch((err) => {
-            res.render("general/login")
-        });;
     });
+
     app.post('/cad-new-user', (req, res) => {
         console.log('New user');
         const user = {

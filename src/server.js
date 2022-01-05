@@ -5,7 +5,7 @@ const server = express()
 
 var bodyParser = require('body-parser');
 
-server.use(express.static("public"))
+server.use(express.static(__dirname + '/public'))
 server.set('view engine', 'ejs')
 server.set('views', './src/views');
 
