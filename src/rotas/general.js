@@ -1,4 +1,7 @@
 module.exports = (app) => {
+
+    //**********************ROTAS CLP****************************//
+    
     app.get('/', (req, res) => {
         res.render("general/index")
     });
@@ -11,6 +14,10 @@ module.exports = (app) => {
     app.get('/user-clp', (req, res) =>{
         res.render("lab-clp/user-clp")
     });
+
+    app.get('/program', (req, res) =>{
+        res.render("lab-fpga/program-fpga")
+    });
     app.get('/clp-crud', (req, res) =>{
         res.render("lab-clp/clp-crud")
     });
@@ -19,5 +26,16 @@ module.exports = (app) => {
     });
     app.post('/clp-data', (req, res) =>{
         res.render("lab-clp/clp-data")
+    });
+
+
+
+    //**********************ROTAS FPGA****************************//
+
+    app.get('/user-fpga', (req, res) =>{
+        res.render("lab-fpga/user-fpga")
+    });
+    app.get('/Trail-intro-fpga', (req, res) =>{
+        res.render("lab-fpga/Trail-intro-fpga")
     });
 }
