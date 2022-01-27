@@ -1,4 +1,6 @@
-function createNav() {
+// gera a navbar conforme as permissões do usuário
+
+function createNavbar() {
     instance.get(`/user/session`)
         .then((user) => {
            
@@ -21,4 +23,4 @@ function createNav() {
         }).catch((err) => { console.log(err, "PROBLEMA NA SESSAO"); });
 }
 
-createNav()
+createNavbar()

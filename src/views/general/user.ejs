@@ -5,34 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RemoteLab | Usuário</title>
-    <link rel="stylesheet" href="/general/css/fonts.css">
-    <link rel="stylesheet" href="/general/css/colors.css">
-    <link rel="stylesheet" href="/general/css/basic.css">
-    <link rel="stylesheet" href="/general/css/scrollbar.css">
+    <!-- CSS GERAL-->
+    <%- include('../partials/general/css-basic')%>
+    <!-- CSS INDIVIDUAL -->
     <link rel="stylesheet" href="/general/css/user.css">
-    <link rel="stylesheet" href="/general/css/responsivity/resp-general.css">
     <link rel="stylesheet" href="/general/css/responsivity/resp-user.css">
-    <link rel="stylesheet" href="/general/css/animations/load.css">
-    <link rel="stylesheet" href="/partials/css/navbar.css">
-    <link rel="stylesheet" href="/partials/css/user-card.css">
-    <link rel="stylesheet" href="/partials/css/lab-card.css">
-    <link rel="stylesheet" href="/partials/css/resp-user-card.css">
-    <link rel="stylesheet" href="/partials/css/nav-resp.css">
+    <link rel="stylesheet" href="/general/css/partials/user-card.css">
+    <link rel="stylesheet" href="/general/css/partials/lab-card.css">
+    <link rel="stylesheet" href="/general/css/partials/resp-user-card.css">
 
-    <!-- Link para ícone da navbar responsiva-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <section>
-        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg", link1: "#", icon1: "/general/img/icons/home-icon.svg", descricao1: "Ícone de tela inicial", link2: "#", icon2: "/general/img/icons/settings-icon.svg", descricao2: "Ícone de configuração dos dados do usuário", class1: "active", class2: ""}) %>
+        <%- include('../partials/general/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
 
         <div class="data">
             <div class="user-data" id="data-user">
             
             </div>
+
             <div class="labs-list">
-                <%- include('../partials/lab-card', {link: "/user-clp", image: "/general/img/labs-record.png", name: "Laboratório de sistemas de controle", desc: "O CLP, controlador lógico programável é um dispositivo utilizado para fazer monitoramento e automação de sistemas elétricos através da sua própria inteligência. O CLP também é chamado de PLC, sigla para Programmable Logic Controller. Com o CLP é possível automatizar processos, máquinas e até mesmo linhas de produção."})%>
-                <%- include('../partials/lab-card', {link: "/user-fpga", image: "/general/img/lab-fpga.png", name: "Laboratório de sistemas digitais", desc: "O FPGA (Field Programmable Gate Array) é um circuito integrado passível de ser configurado por software e serve para implementar circuitos digitais, como processadores, interfaces, controladores e decodificadores. ... O FPGA possui três conjuntos de elementos de configuração."})%>
+                <%- include('../partials/general/lab-card', {link: "/user-clp", image: "/general/img/labs-record.png", name: "Laboratório de sistemas de controle", desc: "O CLP, controlador lógico programável é um dispositivo utilizado para fazer monitoramento e automação de sistemas elétricos através da sua própria inteligência. O CLP também é chamado de PLC, sigla para Programmable Logic Controller."})%>
+                <%- include('../partials/general/lab-card', {link: "/user-fpga", image: "/general/img/lab-fpga.png", name: "Laboratório de sistemas digitais", desc: "O FPGA (Field Programmable Gate Array) é um circuito integrado passível de ser configurado por software e serve para implementar circuitos digitais, como processadores, interfaces, controladores e decodificadores."})%>
             </div>
         </div>
         

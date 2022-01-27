@@ -27,6 +27,15 @@
         align-items: center;
     }
 
+    div.navbar div.icons div{
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    div.navbar div.icons div a{
+      margin: 10px;
+    }
+
     div.navbar div.exit{
         height: 0px;
         display: flex;

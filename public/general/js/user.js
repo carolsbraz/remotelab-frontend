@@ -1,3 +1,5 @@
+// preencher card do user logado
+
 function session() {
     instance.get(`/user/session`)
       .then((user) => {
@@ -13,6 +15,6 @@ function session() {
 
 
       }).catch((err) => { console.log(err, "PROBLEMA NA SESSAO"); });
-  }
+}
 
 session()

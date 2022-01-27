@@ -39,7 +39,6 @@ const formCad = document.getElementById('cad-clp-version');
 function formSubmit(e) {
     e.preventDefault();
 
-
     let version = { release: formCad.release.value, input:{digital: formCad.inDig.value, analog: formCad.inAna.value}, output:{digital: formCad.outDig.value, analog: formCad.outAna.value} };
    
     instance.post(`/plc/version`, version)

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/general/css/responsivity/resp-general.css">
     <link rel="stylesheet" href="/partials/css/resp-user-card.css">
     <link rel="stylesheet" href="/partials/css/nav-resp.css">
-    <link rel="stylesheet" href="/lab-clp/css/clp-cad-initial.css">
+    <link rel="stylesheet" href="/lab-clp/css/disp-clp.css">
     <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
     <link rel="stylesheet" href="/general/css/modal.css">
 </head>
@@ -41,17 +41,17 @@
                     <br>
                     <hr>
                     <br><br>
-                    <h3>Gerenciar dispositivos</h3>
+                    <div class="up-devices">
+                        <h3>Gerenciar dispositivos</h3>
+                        <a href="#abrirModalDispositivo">Novo dispositivo</a>
+                    </div>
 
                     <div class="table-clps" data-anime="up">
                         <table>
                             <thead>
                                 <tr>
                                     <th>
-                                        ID
-                                    </th>
-                                    <th>
-                                        Nome
+                                        Porta
                                     </th>
                                     <th>
                                         Tipo
@@ -59,16 +59,9 @@
                                     <th>
                                         Modelo
                                     </th>
-                                    <th>
-                                        Descrição
-                                    </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <%- include('../partials/table-line-for-dispositivo', {id: "D1" , nome:"Botão",
-                                    tipo: "Entrada digital" , modelo: "Genérico" ,
-                                    descricao: "Descrição para este dispositivo" })%>
-                            </tbody>
+                            <tbody id="list-clp-devices"></tbody>
                         </table>
                     </div>
                 </div>
