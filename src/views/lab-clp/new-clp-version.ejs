@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/general/css/cad-user.css">
     <link rel="stylesheet" href="/general/css/animations/load.css">
     <link rel="stylesheet" href="/partials/css/navbar.css">
-    <link rel="stylesheet" href="/general/css/cad-user.css">
+    <link rel="stylesheet" href="/lab-clp/css/new-clp-version.css">
     <link rel="stylesheet" href="/partials/css/user-card.css">
     <link rel="stylesheet" href="/partials/css/lab-card.css">
     <link rel="stylesheet" href="/partials/css/table-line-for-dispositivo.css">
@@ -34,18 +34,20 @@
 
             <div class="data">
                 <div class="sup-data">
-                    <h2>Cadastro de usuário</h2>
-                    <a href="#abrirModalCadUser">Novo usuário</a>
+                    <h2>Gerenciamento de versões de CLP</h2>
+                    <a href="#abrirModalCadClpVersion">Nova versão</a>
                 </div>
 
                 <table>
                     <thead>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Função</th>
+                        <th>Versão</th>
+                        <th>IN DIG</th>
+                        <th>IN ANA</th>
+                        <th>OUT DIG</th>
+                        <th>OUT ANA</th>
+                        <th>Criado em</th>
                     </thead>
-                    <tbody id="list-user"></tbody>
+                    <tbody id="list-clp-version"></tbody>
                 </table>
 
             </div>
@@ -56,9 +58,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/general/js/instance-axios.js"></script>
-    <script src="/general/js/crud-user.js"></script>
-    <script src="/general/js/cad-user.js"></script>
     <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/new-clp-version.js"></script>
 </body>
 
 </html>

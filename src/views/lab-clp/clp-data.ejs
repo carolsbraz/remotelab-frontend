@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,53 +24,61 @@
     <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
     <link rel="stylesheet" href="/general/css/modal.css">
 </head>
+
 <body>
     <section>
         <%- include('../partials/modal')%>
 
-        <%- include('../partials/navbar', {logo: "/lab-clp/img/logo-lab-clp.svg", link1: "#", icon1: "", descricao1: "", link2: "#", icon2:"", descricao2: "", class1:"", class2:"" }) %>
+            <%- include('../partials/navbar', {logo: "/lab-clp/img/logo-lab-clp.svg" , link1: "#" , icon1: "" ,
+                descricao1: "" , link2: "#" , icon2:"", descricao2: "" , class1:"", class2:"" }) %>
 
-        <div class="data">
-            <h2>Atualização de CLP</h2>
-            <form action="/clp-data" method="post" class="att-clp">
-                <input type="text" name="txt-nome-clp" id="txt-nome-clp" placeholder="Insira o nome do CLP">
-                <input type="text" name="txt-ip-clp" id="txt-ip-clp" placeholder="Insira o IP do CLP">
-                <button type="submit"><img src="/general/img/icons/edit-icon.svg" alt="ìcone de login">Atualizar</button>
-            </form>
-            <br>
-            <hr>
-            <br><br>
-            <h3>Gerenciar dispositivos</h3>
+                <div class="data">
+                    <h2>Atualização de CLP</h2>
+                    <form class="att-clp" id="update-clp-name">
+                        <input type="text" name="name" id="txt-nome-clp" placeholder="Insira o nome do CLP">
+                        <button type="submit">Atualizar</button>
+                    </form>
+                    <br>
+                    <hr>
+                    <br><br>
+                    <h3>Gerenciar dispositivos</h3>
 
-            <div class="table-clps" data-anime="up">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                ID
-                            </th>
-                            <th>
-                                Nome
-                            </th>
-                            <th>
-                                Tipo
-                            </th>
-                            <th>
-                                Modelo
-                            </th>
-                            <th>
-                                Descrição
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%- include('../partials/table-line-for-dispositivo', {id: "D1", nome:"Botão", tipo: "Entrada digital", modelo: "Genérico", descricao: "Descrição para este dispositivo"})%>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <script src="/general/js/animations/load.js"></script>
+                    <div class="table-clps" data-anime="up">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Tipo
+                                    </th>
+                                    <th>
+                                        Modelo
+                                    </th>
+                                    <th>
+                                        Descrição
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%- include('../partials/table-line-for-dispositivo', {id: "D1" , nome:"Botão",
+                                    tipo: "Entrada digital" , modelo: "Genérico" ,
+                                    descricao: "Descrição para este dispositivo" })%>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
     </section>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/clp-data.js"></script>
+    <script src="/general/js/animations/load.js"></script>
 </body>
+
 </html>

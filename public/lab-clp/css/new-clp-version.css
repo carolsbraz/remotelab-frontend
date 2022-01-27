@@ -10,6 +10,7 @@ section div.data{
 section div.data h2{
     color: var(--main-green);
 }
+
 section div.data table{
     width: 100%;
     position: relative;
@@ -130,4 +131,22 @@ form.add-user button:hover{
 div.button{
     display: flex;
     justify-content: center;
+}
+
+div.texts p{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+div.texts input{
+    margin: 0;
+}
+
+div.texts div.inp{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.texts div.inp div:last-child{
+    margin-left: 20px;
 }

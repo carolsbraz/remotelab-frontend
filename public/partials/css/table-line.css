@@ -17,11 +17,6 @@ section div.data table tr {
     border-bottom-style: solid;
 }
 
-section div.data table tr td:first-child {
-    text-align: left;
-    width: 60%;
-}
-
 section div.data table img{
     transform: translateY(5px);
     margin-right: 10px;

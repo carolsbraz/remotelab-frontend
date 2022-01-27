@@ -13,22 +13,19 @@ section div.data div.up-data-clp-cad{
     align-items: center;
 }
 
-section div.data div.up-data-clp-cad a{
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-style: solid;
-    border-width: 1px;
-    width: 150px;
-    justify-content: space-evenly;
-    border-color: var(--main-green);
-    text-decoration: none;
-    border-radius: 5px;
+section div.data h2{
+    margin-top: 20px;
+    color: var(--main-green);
 }
 
 section div.data table{
     width: 100%;
     position: relative;
-    margin: 50px 0 0 0;
+    margin: 20px 0 0 0;
     border-collapse: collapse;
+}
+
+section div.data table button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
 }

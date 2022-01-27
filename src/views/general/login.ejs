@@ -20,9 +20,9 @@
         <div class="login-box">
             <h2>Remote<span>Lab</span></h2>
             <p>Acesse os laboratórios de acesso remoto da Universidade Federal do Amazonas</p>
-            <form action="/user" method="post">
-                <input type="email" name="txt-email" id="txt-email" placeholder="Insira seu endereço de email">
-                <input type="password" name="txt-senha" id="txt-senha" placeholder="Insira sua senha">
+            <form>
+                <input type="email" name="loginId" id="loginId" placeholder="Insira seu endereço de email">
+                <input type="password" name="password" id="password" placeholder="Insira sua senha">
                 <a href="#">Esqueceu sua senha?</a>
                 <button type="submit"><img src="/general/img/icons/enter-icon.svg" alt="ìcone de login">Fazer login</button>
             </form>
@@ -73,5 +73,9 @@
         </div>
     </section>
     <script src="/general/js/animations/load.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/auth-user.js"></script>
+    <script src="/general/js/login.js"></script>
 </body>
 </html>

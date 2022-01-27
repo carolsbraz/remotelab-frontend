@@ -15,7 +15,7 @@ div.navbar img.logo{
     height: 60px;
 }
 
-div.navbar div.icons{
+div.navbar div.icons div{
     display: flex;
     flex-direction: column;
     height: 100px;

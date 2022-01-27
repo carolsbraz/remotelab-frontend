@@ -52,7 +52,7 @@ form.att-clp input#txt-ip-clp:focus{
 
 form.att-clp button{
     margin: 20px 0 0 0;
-    width: 500px;
+    width: 200px;
     background-color: var(--main-green);
     padding: 15px;
     border: solid;

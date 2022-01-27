@@ -27,16 +27,21 @@
         <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg", link1: "#", icon1: "/general/img/icons/home-icon.svg", descricao1: "Ícone de tela inicial", link2: "#", icon2: "/general/img/icons/settings-icon.svg", descricao2: "Ícone de configuração dos dados do usuário", class1: "active", class2: ""}) %>
 
         <div class="data">
-            <div class="user-data">
-                <%- include('../partials/user-card', {image: "/general/img/user-image-example.png", name: "Nome do usuário", email: "email@super.ufam.edu.br"})%>
+            <div class="user-data" id="data-user">
+            
             </div>
             <div class="labs-list">
-                <%- include('../partials/lab-card', {link: "/user-clp", image: "/general/img/labs-record.png", name: "Laboratório de automação e robótica", desc: "O CLP, controlador lógico programável é um dispositivo utilizado para fazer monitoramento e automação de sistemas elétricos através da sua própria inteligência. O CLP também é chamado de PLC, sigla para Programmable Logic Controller. Com o CLP é possível automatizar processos, máquinas e até mesmo linhas de produção."})%>
-                <%- include('../partials/lab-card', {link: "/user-fpga", image: "/general/img/lab-fpga.png", name: "Laboratório FPGA", desc: "O FPGA (Field Programmable Gate Array) é um circuito integrado passível de ser configurado por software e serve para implementar circuitos digitais, como processadores, interfaces, controladores e decodificadores. ... O FPGA possui três conjuntos de elementos de configuração."})%>
+                <%- include('../partials/lab-card', {link: "/user-clp", image: "/general/img/labs-record.png", name: "Laboratório de sistemas de controle", desc: "O CLP, controlador lógico programável é um dispositivo utilizado para fazer monitoramento e automação de sistemas elétricos através da sua própria inteligência. O CLP também é chamado de PLC, sigla para Programmable Logic Controller. Com o CLP é possível automatizar processos, máquinas e até mesmo linhas de produção."})%>
+                <%- include('../partials/lab-card', {link: "/user-fpga", image: "/general/img/lab-fpga.png", name: "Laboratório de sistemas digitais", desc: "O FPGA (Field Programmable Gate Array) é um circuito integrado passível de ser configurado por software e serve para implementar circuitos digitais, como processadores, interfaces, controladores e decodificadores. ... O FPGA possui três conjuntos de elementos de configuração."})%>
             </div>
         </div>
         
     </section>
     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/user.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/general/js/auth-user.js"></script>
 </body>
 </html>

@@ -54,19 +54,19 @@ section.login-area div.login-box form input:focus{
     border-color: var(--main-green);
 }
 
-section.login-area div.login-box form input#txt-email{
+section.login-area div.login-box form input#loginId{
     background: url(/general/img/icons/person-icon.svg) no-repeat scroll 15px 15px;
 }
 
-section.login-area div.login-box form input#txt-email:focus{
+section.login-area div.login-box form input#loginId:focus{
     background: url(/general/img/icons/person-green-icon.svg) no-repeat scroll 15px 15px;
 }
 
-section.login-area div.login-box form input#txt-senha{
+section.login-area div.login-box form input#password{
     background: url(/general/img/icons/password-icon.svg) no-repeat scroll 15px 15px;
 }
 
-section.login-area div.login-box form input#txt-senha:focus{
+section.login-area div.login-box form input#password:focus{
     background: url(/general/img/icons/password-green-icon.svg) no-repeat scroll 15px 15px;
 }
 

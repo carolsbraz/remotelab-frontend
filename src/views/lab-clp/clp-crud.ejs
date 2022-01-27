@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,42 +23,43 @@
     <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
     <link rel="stylesheet" href="/general/css/modal.css">
 </head>
+
 <body>
     <section>
         <%- include('../partials/modal')%>
 
-        <%- include('../partials/navbar', {logo: "/lab-clp/img/logo-lab-clp.svg", link1: "#", icon1: "", descricao1: "", link2: "#", icon2:"", descricao2: "", class1:"", class2:"" }) %>
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
 
-        <div class="data">
-            <div class="up-data-clp-cad">
-                <div class="user-data" data-anime="up">
-                    <%- include('../partials/user-card', {image: "/general/img/user-image-example.png", name: "Nome do administrador", email: "adm@super.ufam.edu.br"})%>
+                <div class="data">
+                    <div class="up-data-clp-cad">
+                    </div>
+                    <div class="table-clps" data-anime="up">
+                        <h2>Gerenciamento de CLP</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Referência
+                                    </th>
+                                    <th>
+                                        Nome do CLP
+                                    </th>
+                                    <th>
+                                        Versão
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-clp"></tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="add-btn" data-anime="up">
-                    <a href="#abrirModalCLP"> <img src="/general/img/icons/add-icon.svg" alt="">Novo CLP</a>
-                </div>
-            </div>
-            <div class="table-clps" data-anime="up">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                Nome do CLP
-                            </th>
-                            <th>
-                                IP
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%- include('../partials/table-line', {icon: "/lab-clp/img/icons/board-icon.svg", iconDesc:"Ícone de CLP", linkDiagram: "/clp-data", nameDiagram: "CLP 1", lastDateDiagram: "XXX.XX.XXX.XXX"})%>
-                        <%- include('../partials/table-line', {icon: "/lab-clp/img/icons/board-icon.svg", iconDesc:"Ícone de CLP", linkDiagram: "/clp-data", nameDiagram: "CLP 2", lastDateDiagram: "XXX.XX.XXX.XXX"})%>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <script src="/general/js/animations/load.js"></script>
+                
     </section>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/clp-crud.js"></script>
+    <script src="/general/js/animations/load.js"></script>
 </body>
+
 </html>

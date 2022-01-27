@@ -5,7 +5,7 @@ module.exports = (app) => {
     app.get('/login', (req, res) => {
         res.render("general/login")
     });
-    app.post('/user', (req, res) =>{
+    app.get('/user', (req, res) =>{
         res.render("general/user")
     });
     app.get('/user-clp', (req, res) =>{
@@ -17,7 +17,10 @@ module.exports = (app) => {
     app.get('/cad-user', (req, res) =>{
         res.render("general/cad-user")
     });
-    app.post('/clp-data', (req, res) =>{
+    app.get('/clp-data', (req, res) =>{
         res.render("lab-clp/clp-data")
+    });
+    app.get('/new-clp-version', (req, res) =>{
+        res.render("lab-clp/new-clp-version")
     });
 }
