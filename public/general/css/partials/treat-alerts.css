@@ -1,0 +1,20 @@
+#error-alert{
+    background-color: rgba(197, 28, 28, 0.623);
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    display: none;
+    margin: 0 auto;
+    top: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#error-title{
+    color: white;
+}
+
+#error-text{
+    color: white;
+}

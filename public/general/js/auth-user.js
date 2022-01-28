@@ -14,9 +14,3 @@ function logout() {
     console.log(err)
   });
 }
-
-const btnExit = document.getElementById("btn-exit")
-
-btnExit.addEventListener("click", () => {
-  logout()
-})

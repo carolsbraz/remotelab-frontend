@@ -26,17 +26,19 @@ function listUser() {
 
             users.forEach(user => {
 
-                const tr = document.createElement('tr');
+                if (user.role != "MASTER") {
+                    const tr = document.createElement('tr');
 
-                line = `<td>${user._id}</td><td>${user.name}</td><td>${user.email}</td><td>${user.role}</td><td><button onClick="edit(this)"> <img src="/general/img/icons/edit-icon.svg"> </button><button onClick="del(this)"><img src="/general/img/icons/delete-icon.svg"></button></td>`
+                    line = `<td>${user._id}</td><td>${user.name}</td><td>${user.email}</td><td>${user.role}</td><td><button onClick="edit(this)"> <img src="/general/img/icons/edit-icon.svg"> </button><button onClick="del(this)"><img src="/general/img/icons/delete-icon.svg"></button></td>`
 
-                tr.innerHTML = line
+                    tr.innerHTML = line
 
-                console.log(tr)
+                    console.log(tr)
 
-                list.appendChild(tr);
+                    list.appendChild(tr);
 
-                console.log(list)
+                    console.log(list)
+                }
 
             });
 

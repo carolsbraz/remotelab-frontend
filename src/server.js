@@ -12,4 +12,4 @@ require(__dirname + "/routes/clp-routes.js")(server);
 require(__dirname + "/routes/fpga-routes.js")(server);
 
 //ligar o servidor
-http.createServer(server).listen(process.env.PORT || 3030, () => console.log("Servidor rodando"));
+http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));

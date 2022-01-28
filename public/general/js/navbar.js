@@ -9,7 +9,7 @@ function createNavbar() {
             data.classList.add = "icons"
 
             if(user.data.role == "MASTER"){
-                line = `<a href="#"> <img src="/general/img/icons/diagram-icon.svg"></a> <a href="#"> <img src="/general/img/icons/settings-icon.svg"> </a><a href="/new-clp-version"> <img src="/general/img/icons/person-add.svg"> </a><a href="/new-clp-version"> <img src="/general/img/icons/new-clp-version-icon.svg"> </a>`
+                line = `<a href="/user"> <img src="/general/img/icons/diagram-icon.svg"></a> <a href="/crud-user"> <img src="/general/img/icons/person-add.svg"> </a> <a href="/new-clp-version"> <img src="/general/img/icons/version-clp-icon.svg"> </a><a href="/clp-crud"> <img src="/general/img/icons/board-icon.svg"> </a>`
             }else{
                 line = `<a href="#"> <img src="/general/img/icons/diagram-icon.svg"> <a href="#"> <img src="/general/img/icons/settings-icon.svg"> </a>`
             }

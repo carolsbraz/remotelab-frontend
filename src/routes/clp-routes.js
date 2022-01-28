@@ -16,4 +16,7 @@ module.exports = (app) => {
         res.render("lab-clp/new-clp-version")
     });
 
+    app.get('/clp-diagram', (req, res) =>{
+        res.render("lab-clp/diagram")
+    });
 }
