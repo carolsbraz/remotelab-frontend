@@ -1,0 +1,104 @@
+img.back-index{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+section.login-area{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+section.login-area div.login-box{
+    background-color: white;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section.login-area div.login-box p{
+    margin: 20px 0 0 0;
+}
+
+section.login-area div.login-box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.login-area div.login-box form input{
+    margin: 20px 0 0 0;
+    padding: 20px;
+    padding-left: 50px;
+    border-width: 1px;
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border-style: solid;
+    transition: .5s;
+    width: 300px;
+}
+
+section.login-area div.login-box form input:focus{
+    border-color: var(--main-green);
+}
+
+section.login-area div.login-box form input#loginId{
+    background: url(/general/img/icons/person-icon.svg) no-repeat scroll 15px 15px;
+}
+
+section.login-area div.login-box form input#loginId:focus{
+    background: url(/general/img/icons/person-green-icon.svg) no-repeat scroll 15px 15px;
+}
+
+section.login-area div.login-box form input#password{
+    background: url(/general/img/icons/password-icon.svg) no-repeat scroll 15px 15px;
+}
+
+section.login-area div.login-box form input#password:focus{
+    background: url(/general/img/icons/password-green-icon.svg) no-repeat scroll 15px 15px;
+}
+
+section.login-area div.login-box form button{
+    margin: 20px 0 0 0;
+    width: 200px;
+    background-color: var(--main-green);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+section.login-area div.login-box form button:hover{
+    background-color: var(--main-green-darker);
+}
+
+section.login-area div.login-box h2{
+    color: var(--main-green);
+}
+
+section.login-area div.login-box h2 span{
+    color: var(--secondary-green)
+}
+
+section.login-area div.image-area svg{
+    width: 400px;
+}

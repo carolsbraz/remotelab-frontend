@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Versões de CLP</title>
+     <!-- CSS GERAL-->
+     <%- include('../partials/css-basic')%>
+     <!-- CSS INDIVIDUAL -->
+    <link rel="stylesheet" href="/lab-clp/css/new-clp-version.css">
+    <link rel="stylesheet" href="/partials/css/table-line-for-dispositivo.css">
+    <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
+
+    <!-- Link para ícone da navbar responsiva-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section>
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
+
+            <div class="data">
+                <div class="sup-data">
+                    <h2>Gerenciamento de versões de CLP</h2>
+                    <a href="#abrirModalCadClpVersion">Nova versão</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <th>Versão</th>
+                        <th>IN DIG</th>
+                        <th>IN ANA</th>
+                        <th>OUT DIG</th>
+                        <th>OUT ANA</th>
+                        <th>Criado em</th>
+                    </thead>
+                    <tbody id="list-clp-version"></tbody>
+                </table>
+
+            </div>
+
+            <%- include('../partials/modal') %>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/new-clp-version.js"></script>
+</body>
+
+</html>

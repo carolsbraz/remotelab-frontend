@@ -1,0 +1,27 @@
+section div.data table tr,
+td,
+th {
+    padding: 20px;
+    align-items: center;
+}
+
+section div.data table th {
+    border: 0px;
+    border: none;
+    text-align: left;
+}
+
+
+section div.data table tr {
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+}
+
+section div.data table img{
+    transform: translateY(5px);
+    margin-right: 10px;
+}
+
+section div.data table a{
+    color: var(--text-color);
+}

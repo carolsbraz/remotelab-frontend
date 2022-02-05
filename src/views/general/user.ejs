@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | Laboratórios</title>
+    <!-- CSS GERAL-->
+    <%- include('../partials/css-basic')%>
+    <!-- CSS INDIVIDUAL -->
+    <link rel="stylesheet" href="/general/css/user.css">
+    <link rel="stylesheet" href="/general/css/responsivity/resp-user.css">
+    <link rel="stylesheet" href="/general/css/partials/user-card.css">
+    <link rel="stylesheet" href="/general/css/partials/lab-card.css">
+    <link rel="stylesheet" href="/general/css/partials/resp-user-card.css">
+
+</head>
+<body>
+    <section>
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
+
+        <div class="data">
+            <div class="user-data" id="data-user">
+            
+            </div>
+
+            <div class="labs-list">
+                <%- include('../partials/lab-card', {link: "/clp-diagram", image: "/general/img/labs-record.png", name: "Laboratório de sistemas de controle", desc: "O CLP, controlador lógico programável é um dispositivo utilizado para fazer monitoramento e automação de sistemas elétricos através da sua própria inteligência. O CLP também é chamado de PLC, sigla para Programmable Logic Controller."})%>
+                <%- include('../partials/lab-card', {link: "/user-fpga", image: "/general/img/lab-fpga.png", name: "Laboratório de sistemas digitais", desc: "O FPGA (Field Programmable Gate Array) é um circuito integrado passível de ser configurado por software e serve para implementar circuitos digitais, como processadores, interfaces, controladores e decodificadores."})%>
+            </div>
+        </div>
+        
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/user.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/general/js/auth-user.js"></script>
+</body>
+</html>

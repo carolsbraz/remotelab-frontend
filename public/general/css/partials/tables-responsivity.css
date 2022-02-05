@@ -1,0 +1,29 @@
+/*Laptop*/
+@media (max-width: 1024px) {
+    
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+    section div.data{
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 20px 20px 20px 20px !important; 
+    }
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+    
+
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+    
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+    
+}

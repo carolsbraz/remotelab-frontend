@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | CLPs</title>
+    <!-- CSS GERAL-->
+    <%- include('../partials/css-basic')%>
+    <!-- CSS INDIVIDUAL -->
+    <link rel="stylesheet" href="/lab-clp/css/clp-crud.css">
+    <link rel="stylesheet" href="/partials/css/table-line.css">
+    <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
+</head>
+
+<body>
+    <section>
+        <%- include('../partials/modal')%>
+
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
+
+                <div class="data">
+                    <div class="up-data-clp-cad">
+                    </div>
+                    <div class="table-clps" data-anime="up">
+                        <h2>Gerenciamento de CLP</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Referência
+                                    </th>
+                                    <th>
+                                        Nome do CLP
+                                    </th>
+                                    <th>
+                                        Versão
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-clp"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/clp-crud.js"></script>
+    <script src="/general/js/animations/load.js"></script>
+</body>
+
+</html>

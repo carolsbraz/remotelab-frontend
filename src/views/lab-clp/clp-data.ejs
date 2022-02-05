@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteLab | CLP</title>
+    <!-- CSS GERAL-->
+    <%- include('../partials/css-basic')%>
+    <!-- CSS INDIVIDUAL -->
+    <link rel="stylesheet" href="/lab-clp/css/clp-data.css">
+    <link rel="stylesheet" href="/partials/css/disp-clp.css">
+    <link rel="stylesheet" href="/partials/css/table-line-for-dispositivo.css">
+    <link rel="stylesheet" href="/lab-clp/css/disp-clp.css">
+    <link rel="stylesheet" href="/lab-clp/css/responsivity/resp-clp-crud.css">
+</head>
+
+<body>
+    <section>
+        <%- include('../partials/modal')%>
+
+        <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
+
+                <div class="data">
+                    <h2>Atualização de CLP</h2>
+                    <form class="att-clp" id="update-clp-name">
+                        <input type="text" name="name" id="txt-nome-clp" placeholder="Insira o nome do CLP">
+                        <button type="submit">Atualizar</button>
+                    </form>
+                    <br>
+                    <hr>
+                    <br><br>
+                    <div class="up-devices">
+                        <h3>Gerenciar dispositivos</h3>
+                        <a href="#abrirModalDispositivo">Novo dispositivo</a>
+                    </div>
+
+                    <div class="table-clps" data-anime="up">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Porta
+                                    </th>
+                                    <th>
+                                        Tipo
+                                    </th>
+                                    <th>
+                                        Modelo
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-clp-devices"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
+    <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/clp-data.js"></script>
+    <script src="/general/js/animations/load.js"></script>
+</body>
+
+</html>
