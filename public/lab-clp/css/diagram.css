@@ -4,14 +4,45 @@ section{
 }
 
 section div.data{
-    padding: 50px 50px 50px 150px;
+    padding: 0px 0px 50px 150px;
     width: 100%;
+}
+
+section div.data div.lines div.line{
+    display: flex;
+    border-left: 5.8px solid #5C5C5C;
+    min-height: 70px;
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+}
+
+section div.data div.lines div.line div.dropBlockBox{
+    width: 80px;
+}
+
+section div.data div.lines div.line div.dotted{
+    border: 6px dotted #5c5c5c34;
+    border-left-style: none;
+}
+
+section div.data div.lines div.line svg{
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 28%, var(--background-color) 28%, var(--background-color) 72%, rgba(0,0,0,0) 72%); 
+  }
+
+section div.data div.lines div.line hr{
+    background-color: #5C5C5C;
+    position: absolute;
+    width: 100%;
+    border: 3px solid #5C5C5C;
+    bottom: 51%;
+    z-index: -1000;
 }
 
 section div.lateral-bar{
     background-color: white;
     height: 100vh;
-    width: 200px;
+    width: 300px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,3 +52,56 @@ section div.lateral-bar{
     background-color: white;
     box-shadow: 0px 1px 80px 0px rgba(0, 0, 0, 0.1);
 }
+
+section div.lateral-bar div table{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+section div.lateral-bar div table{
+    width: 100%;
+}
+
+section div.lateral-bar div table th, td{
+    padding: 5px !important;
+}
+
+/* Blocos */
+
+section div.lateral-bar div.drag-blocks div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+section div.lateral-bar div.drag-blocks div div{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.219);
+    padding: 10px;
+    width: 100px;
+    margin: 0px 5px;
+}
+
+/* Estilos do modal */
+
+section div#mod-list-clp div{
+    margin-top: 20px;
+}
+
+section div#mod-list-clp div input[type="radio"]{
+    margin-right: 10px;
+}
+
+section div#add-new-var .data-var-type{
+    display: none;
+}
+
+div#valores{
+    display: flex;
+    justify-content: space-around;
+}
+
+div#valores-out{
+    display: flex;
+    justify-content: space-around;
+}
+

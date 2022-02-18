@@ -4,7 +4,7 @@
   "description": "Projeto da Universidade Federal do Amazonas para acesso remoto aos laboratorios",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bruno Moura, Caroline Braz, Fernando Ventilari, Hitalo Perseu, Maria Sara Navarro",

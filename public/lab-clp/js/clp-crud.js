@@ -8,8 +8,8 @@ function listClp() {
 
             list.innerHTML = ""
 
-            clps.forEach(clp => {
-
+            clps.forEach(clp => { 
+                
                 const tr = document.createElement('tr');
 
                 line = `<td>${clp.reference}</td><td>${clp.name}</td><td>${clp.version.release}</td><td><button onClick="edit(this)"> <img src="/general/img/icons/edit-icon.svg"> </button><button onClick="del(this)"><img src="/general/img/icons/delete-icon.svg"></button></td>`

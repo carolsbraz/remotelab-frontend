@@ -8,9 +8,15 @@
     <title>RemoteLab | Ladder</title>
     <!-- CSS GERAL-->
     <%- include('../partials/css-basic')%>
-    <!-- CSS INDIVIDUAL -->
-    <link rel="stylesheet" href="/lab-clp/css/diagram.css">
-
+        <!-- CSS INDIVIDUAL -->
+        <link rel="stylesheet" href="/lab-clp/css/diagram.css">
+        <!-- noUiSlider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.css"
+            integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"
+            integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -19,17 +25,152 @@
 
             <%- include('../partials/navbar', {logo: "/general/img/logo-remotelab.svg" }) %>
 
-                <div class="data">
-                    
+                <div class="data" id="data">
+                    <div class="lines" id="lines"></div>
+                    <button onclick="newLine()">Adicionar linha</button>
                 </div>
 
                 <div class="lateral-bar">
-                    oioi
+                    <div class="choose-clp">
+                        <a id="btn-list-clp" href="#abrirModalListarCLPs">Escolher CLP</a>
+                    </div>
+                    <div class="vars">
+                        <table>
+                            <thead>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                            </thead>
+                            <tbody id="list-vars">
+                                <tr>
+                                    <td>sdasd</td>
+                                    <td>sdasd</td>
+                                    <td>sdasd</td>
+                                </tr>
+                                <tr>
+                                    <td>sdasd</td>
+                                    <td>sdasd</td>
+                                    <td>sdasd</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="add-var">
+                        <a id="btn-new-var" href="#abrirModalCriarVariavel">Adicionar nova variável</a>
+                    </div>
+                    <div class="drag-blocks">
+
+                        <div class="blocks C">
+                            <div class="block CA">
+                                <svg width="82" height="43" viewBox="0 0 82 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21H26V3" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21H26V40" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M79 21H56V3" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M79 21H56V40" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="block CF">
+                                <svg width="82" height="43" viewBox="0 0 82 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21H26V3" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21H26V40" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M79 21H56V3" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M79 21H56V40" stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M49 4C44.8915 12.9874 38.4795 27.0137 38.4795 27.0137L33 39"
+                                        stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="blocks B">
+                            <div class="block BA">
+                                <svg width="89" height="43" viewBox="0 0 89 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21.5H23.122C23.2439 16.5947 25.3902 6.02727 33 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21.5H23.122C23.2439 26.4053 25.3902 36.9727 33 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 16.5947 63.6098 6.02727 56 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 26.4053 63.6098 36.9727 56 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                            <div class="block BF">
+                                <svg width="89" height="43" viewBox="0 0 89 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21.5H23.122C23.2439 16.5947 25.3902 6.02727 33 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21.5H23.122C23.2439 26.4053 25.3902 36.9727 33 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M53 11.2222C48.8915 17.0284 42.4795 26.0898 42.4795 26.0898L37 33.8333"
+                                        stroke="#5C5C5C" stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 16.5947 63.6098 6.02727 56 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 26.4053 63.6098 36.9727 56 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+
+                        <div class="blocks B">
+                            <div class="block BS">
+                                <svg width="89" height="43" viewBox="0 0 89 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21.5H23.122C23.2439 16.5947 25.3902 6.02727 33 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21.5H23.122C23.2439 26.4053 25.3902 36.9727 33 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 16.5947 63.6098 6.02727 56 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 26.4053 63.6098 36.9727 56 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path
+                                        d="M46.2173 19.5H50.1847C50.1697 16.5021 47.858 14.5185 44.1591 14.5185C40.5273 14.5185 37.962 16.4723 37.9844 19.3807C37.9769 21.767 39.6325 23.0945 42.3395 23.6761L43.8608 24.0043C45.5611 24.3771 46.1428 24.8022 46.1577 25.4957C46.1428 26.2489 45.4567 26.7784 44.1293 26.7784C42.5408 26.7784 41.6012 26.0327 41.5341 24.6307H37.5966C37.6115 28.4638 40.2067 30.179 44.1889 30.179C48.0593 30.179 50.3786 28.5085 50.3935 25.4957C50.3786 23.169 48.9915 21.5359 45.6207 20.8125L44.3679 20.544C42.9212 20.2383 42.2724 19.8132 42.3097 19.0824C42.3171 18.4112 42.8764 17.919 44.1591 17.919C45.5014 17.919 46.1353 18.5082 46.2173 19.5Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+
+                            </div>
+                            <div class="block BR">
+                                <svg width="89" height="43" viewBox="0 0 89 43" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21.5H23.122C23.2439 16.5947 25.3902 6.02727 33 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M3 21.5H23.122C23.2439 26.4053 25.3902 36.9727 33 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 16.5947 63.6098 6.02727 56 3" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path d="M86 21.5H65.878C65.7561 26.4053 63.6098 36.9727 56 40" stroke="#5C5C5C"
+                                        stroke-width="5" stroke-linecap="round" />
+                                    <path
+                                        d="M37.9844 28.1389H42.1307V23.0977H43.5625L46.2472 28.1389H50.7514L47.6491 22.4414C49.2749 21.6584 50.2443 20.1744 50.2443 18.0565C50.2443 14.8051 47.9698 12.8662 44.5767 12.8662H37.9844V28.1389ZM42.1307 19.8761V16.1772H43.5923C45.0465 16.1772 45.919 16.744 45.919 18.0565C45.919 19.3615 45.0465 19.8761 43.5923 19.8761H42.1307Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="run-code"></div>
                 </div>
 
     </section>
 
+ <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+ <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/general/js/instance-axios.js"></script>
     <script src="/general/js/navbar.js"></script>
+    <script src="/lab-clp/js/diagram.js"></script>
+    <script src="/general/js/animations/load.js"></script>
+
+   
+
 </body>
 
 </html>

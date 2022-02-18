@@ -1,0 +1,157 @@
+[
+  {
+    "qtVars": 2,
+    "devVars":{
+      "input":{
+        "digital":[
+          {
+            "id": 0,
+            "port": 0
+          }
+        ]
+      },
+      "output":{
+        "digital":[
+          {
+            "id": 1,
+            "port": 0
+          }
+        ]
+      }
+    },
+    "diagram": "{CA0BA1}"
+  },
+
+  {
+    "qtVars":3,
+    "devVars":{
+      "input":{
+        "digital":[
+        {
+          "id":0,
+          "port":0
+        },
+        {
+          "id":1,
+          "port":1
+        }
+      ]
+      },
+      "output":{
+        "digital":[
+          {
+            "id":2,
+            "port":0
+          }
+        ]
+      }
+    },
+    "diagram":"{CA0CA1BA2}"
+  },
+
+  {
+    "qtVars":3,
+    "devVars":{
+      "input":{
+        "digital":[
+          {
+            "id":0,
+            "port":0
+          },
+          {
+            "id":1,
+            "port":1
+          }
+        ]
+      },
+      "output":{
+        "digital":[
+          {
+            "id":2,
+            "port":0
+          }
+        ]
+      }
+    },
+    "diagram":"{[(CA0)(CA1)]BA2}"
+  },
+
+  {
+    "qtVars":2,
+    "devVars":{
+      "input":{
+        "analog":[
+          {
+            "id":0,
+            "port":0,
+            "extras":{
+              "divs": [250],
+              "zones": "01",
+              "dominances": "0"
+            }
+          }
+        ]
+      },
+      "output":{
+        "digital":[
+          {
+            "id":1,
+            "port":0
+          }
+        ]
+      }
+    },
+    "diagram":"{CA0BA1}"
+  },
+
+  {
+    "qtVars":7,
+    "devVars":{
+      "input":{
+        "digital":[
+          {
+            "id":0,
+            "port":0
+          },
+          {
+            "id":1,
+            "port":1
+          }
+        ],
+        "analog":[
+          {
+            "id":4,
+            "port":0,
+            "extras":{
+              "divs": [166,332],
+              "zones": "010",
+              "dominances": "00"
+            }
+          },
+          {
+            "id":5,
+            "port":1,
+            "extras":{
+              "divs": [166,332],
+              "zones": "101",
+              "dominances": "11"
+            }
+          }
+        ]
+      },
+      "output":{
+        "digital":[
+          {
+            "id":3,
+            "port":0
+          },
+          {
+            "id":6,
+            "port":1
+          }
+        ]
+      }
+    },
+    "diagram":"{[(CA0)(CA2)]CF1BA2}{CA2BA3}{CA2[(CF4CA5)(CA4CF5)]BA6}"
+  }
+]
