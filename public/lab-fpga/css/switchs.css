@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+.all{
+  justify-content: space-between;
+
+}
+.chave{
+  display: flex;
+  height: 124px;
+  margin-left: 150px;
+
+}
+
+
+/*.conteiner{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}*/
+/* -----------------------------SWITCH1---------------------*/
+.switch{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 10px;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+
+}
+
+.switch label span::before, .switch label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+
+
+#switch{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 1.7em; 
+}
+
+#switch:checked + label span{
+  background: var(--main-green);
+}
+
+#switch:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch:checked + label span::after{
+  background: var(--main-green);
+}
+#switch:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 1.7em;
+  color: red;
+} 
+#switch:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+/* -----------------------------SWITCH2---------------------*/
+.switch2{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch2 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch2 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch2 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch2 label span::before, .switch2 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch2 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch2 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch2{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch2:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch2:checked + label span{
+  background: var(--main-green);
+}
+
+#switch2:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch2:checked + label span::after{
+  background: var(--main-green);
+}
+#switch2:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch2:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch2:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+/* -----------------------------SWITCH3---------------------*/
+.switch3{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch3 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch3 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch3 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch3 label span::before, .switch3 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch3 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch3 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch3{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch3:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch3:checked + label span{
+  background: var(--main-green);
+}
+
+#switch3:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch3:checked + label span::after{
+  background: var(--main-green);
+}
+#switch3:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch3:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch3:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+/* -----------------------------SWITCH4---------------------*/
+.switch4{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch4 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch4 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch4 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch4 label span::before, .switch4 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch4 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch4 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch4{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch4:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch4:checked + label span{
+  background: var(--main-green);
+}
+
+#switch4:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch4:checked + label span::after{
+  background: var(--main-green);
+}
+#switch4:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch4:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch4:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+
+/* -----------------------------SWITCH5---------------------*/
+.switch5{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch5 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch5 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch5 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch5 label span::before, .switch5 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch5 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch5 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch5{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch5:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch5:checked + label span{
+  background: var(--main-green);
+}
+
+#switch5:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch5:checked + label span::after{
+  background: var(--main-green);
+}
+#switch5:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch5:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch5:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+
+/* -----------------------------SWITCH6---------------------*/
+
+.switch6{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch6 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch6 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch6 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch6 label span::before, .switch6 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch6 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch6 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch6{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch6:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch6:checked + label span{
+  background: var(--main-green);
+}
+
+#switch6:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch6:checked + label span::after{
+  background: var(--main-green);
+}
+#switch6:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch6:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch6:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+
+/* -----------------------------SWITCH7---------------------*/
+
+.switch7{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch7 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch7 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch7 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch7 label span::before, .switch7 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch7 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch7 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch7{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch7:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch7:checked + label span{
+  background: var(--main-green);
+}
+
+#switch7:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch7:checked + label span::after{
+  background: var(--main-green);
+}
+#switch7:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch7:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch7:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+
+/* -----------------------------SWITCH8---------------------*/
+
+.switch8{
+  height: 3em;
+  width: 5.5em;
+  background: #dfe9f5;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 30px rgba(0,0,0,0.05),
+              5px 5px 10px rgba(0,0,0,0.05);
+  transform: rotate(90deg);
+  margin-block-start: 50px; 
+}
+
+.switch8 label{
+  display: flex;
+  align-content: center;
+  width: 120%;
+  height: 100%;
+  background: #dfe9f5;
+  cursor: pointer;
+}
+.switch8 label::after{
+  width: 45%;
+  text-align: center;
+}
+
+.switch8 label span{
+  display: flex;
+  width: 55%;
+  height: 100%;
+  perspective: 10em;
+  margin-left: 6px;
+  border-radius: 1em;
+}
+
+.switch8 label span::before, .switch8 label span::after{
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform: preserve-3D !important;
+  transition: all 0.3s ease;
+  background: #cf2e18;
+}
+.switch8 label span::before{
+  border-radius: 1em 0 0 1em;
+}
+
+.switch8 label span::after{
+  border-radius: 0 1em 1em 0;
+}
+
+#switch8{
+  position:  absolute;
+  visibility: hidden;
+
+}
+#switch8:checked + label::after{
+  content: '\2022';
+  color: var(--main-green);
+  font-size: 2.5em; 
+}
+
+#switch8:checked + label span{
+  background: var(--main-green);
+}
+
+#switch8:checked + label span::before{
+  background: var(--secondary-green);
+  transform: rotateY(40deg);
+  transform-origin: 100% 0;
+  box-shadow: 5px 0 0 var(--main-green);
+}
+
+#switch8:checked + label span::after{
+  background: var(--main-green);
+}
+#switch8:not(:checked) + label::after{
+  content: '\2022';
+  font-size: 2.5em;
+  color: red;
+} 
+#switch8:not(:checked) + label span{
+background: #cf2e18;
+} 
+#switch8:not(:checked) + label span::after{
+  background: #e1432e;
+  transform: rotateY(-40deg);
+  transform-origin: 0 0;
+  box-shadow:  5px 0 0 #cf2e18
+}
+
+/* -----------------------------SWITCH9---------------------*/
+

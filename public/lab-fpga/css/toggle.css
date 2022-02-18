@@ -1,0 +1,105 @@
+
+
+body:before{ content:''; display:inline-block; height:100%; vertical-align:middle; }
+  fieldset{ 
+    display:inline-block; 
+    vertical-align:middle; 
+    border:none; 
+    text-align:center;
+    font:15px/1;
+    width:370px; 
+}
+      
+
+      .checkboxGroup{ 
+        display: flex;
+        vertical-align:middle; 
+        border:none; 
+        }
+  /*------- Horizontal power swtich ---------*/
+
+  .group{
+    justify-content: space-between;
+    width: 90px;
+    padding-top: 50px;
+  }
+
+  .checkboxControl{ 
+
+
+      border:2px solid #969696; 
+      border-radius:7px; 
+      display:grid; 
+      width: 64px;
+
+
+
+      position:relative; 
+      vertical-align:middle; 
+      margin:0 60px 10px 0; 
+      color:#8f9294;
+      box-shadow: 0 0 5px rgba(255,255,255,.4), 
+      0 2px 1px -1px rgba(255,255,255,.7) inset, 
+      8px 0 5px -5px rgb(77, 77, 77) inset,
+      -8px 0 5px -5px rgb(109, 109, 109) inset;
+      -moz-user-select:none; 
+      -webkit-user-select:none; 
+      transform: rotate(90deg);
+
+
+  }
+      .checkboxControl input{
+           position:absolute; 
+           visibility:hidden; 
+        }
+      .checkboxControl > div{ 
+          background:-webkit-linear-gradient(left, rgb(175, 190, 192) 0%,rgb(225, 247, 250) 53%,rgb(175, 233, 243) 56%,rgb(152, 166, 170) 99%,#CEF5FF 100%);
+          background:linear-gradient(to right, rgb(210, 222, 224) 0%,rgb(238, 253, 255) 53%,rgb(177, 195, 199) 56%,rgb(172, 194, 199) 99%,#CEF5FF 100%);
+          box-shadow:-2px 0 1px 0 rgb(231, 231, 231) inset;
+          border-radius:5px; 
+          line-height:40px; 
+          font-weight:bold; 
+          cursor:pointer; 
+          position:relative; 
+          z-index:1; 
+          text-shadow:0 1px rgba(22, 21, 21, 0.5);
+          height: 39px;
+          width: 60px;
+          transform-origin:0 0; -webkit-transform-origin:0 0; 
+          transform:scaleX(0.93); -webkit-transform:scaleX(0.93);
+          transition:.1s; -webkit-transition:0.1s;
+      }
+      .checkboxControl div:first-letter{ 
+          letter-spacing:55px;
+         }
+      
+      .checkboxControl :checked ~ div{ 
+          transform-origin:100% 0; -webkit-transform-origin:100% 0;
+          box-shadow:2px 0 1px 0 rgb(255, 255, 255) inset;
+          background:-webkit-linear-gradient(left, #CEF5FF 0%,rgb(177, 200, 206) 1%,rgb(204, 220, 223) 47%,rgb(213, 232, 235) 50%,rgb(255, 255, 255) 100%);
+          background:linear-gradient(to right, rgb(190, 241, 149) 0%,rgb(171, 181, 182) 1%,rgb(171, 181, 182) 47%,rgb(203, 232, 236) 50%,rgb(194, 206, 207) 100%);
+      }
+      /* bottom shadow of 'upper' side of the button */
+      .checkboxControl > b{ 
+        position:absolute; 
+        bottom:0; 
+        right:0; 
+        width:50%; 
+        height:100%; 
+        border-radius:8px; 
+        -webkit-transform:skewY(5deg); 
+        transform:skewY(5deg); 
+        box-shadow: 0 6px 8px -5px #000; 
+    }
+      .checkboxControl :checked ~ b{ 
+        right:auto; 
+        left:0; 
+        -webkit-transform:skewY(-5deg); 
+        transform:skewY(-5deg); 
+    }
+
+      /* the light indicator to the right of the button */
+      .checkboxControl .indicator{ position:absolute; top: 8px;; right:-20px; width:8px; height:25px; box-shadow:0 0 8px #000 inset; border:1px solid rgba(255,255,255,0.1); border-radius:15px; transition:0.2s; -webkit-transition:0.2s; }
+      .checkboxControl .indicator:before{ content:''; display:inline-block; margin-top:8px; width:2px; height:8px; border-radius:10px; transition:0.5s; -webkit-transition:0.5s; }
+      .checkboxControl :checked ~ .indicator:before{ box-shadow:0 0 7px 6px #BAFC58; width:6px; background:#F0F9E3; transition:0.1s; -webkit-transition:0.1s; }
+      

@@ -1,0 +1,527 @@
+
+
+
+/*-------------------popup--------------------------*/
+.btn{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+}
+.btn:hover{
+    background: rgb(139, 139, 139);
+}
+
+.btn2{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn2:hover{
+    background: rgb(139, 139, 139);
+}
+
+.btn3{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn3:hover{
+    background: rgb(139, 139, 139);
+    color: darkgreen;
+    
+}
+
+.btn4{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn4:hover{
+    background: rgb(139, 139, 139);
+}
+
+.btn5{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn5:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn6{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn6:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn7{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn7:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn8{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+}
+.btn8:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn9{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn9:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn10{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn10:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn11{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn11:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn12{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn12:hover{
+    background: rgb(139, 139, 139); 
+}
+/*----------------------------------modal---------------------*/
+.popup{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 10;
+}
+.modal{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1000;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(30%, 30%);
+}
+.modal2{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(30%, 30%);
+}
+.popup2{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal3{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(30%, 30%);
+}
+.popup3{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal4{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(30%, 30%);
+}
+.popup4{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal5{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(35%, 30%);
+}
+.popup5{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal6{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(35%, 30%);
+}
+.popup6{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal7{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(40%, 30%);
+}
+.popup7{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal8{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup8{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal9{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup9{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal10{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup10{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal11{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup11{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal12{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup12{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.fechar{
+    float: right;
+    margin: 10px;
+    font-size: 1.8em;
+    cursor: pointer;
+
+}
+
+.config{
+    display: inline-grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100vh;
+    padding: 0px 70px;
+}
+.config h1{
+    display: flex;
+    justify-content: center
+}
+
+.inputs{
+    display: contents;
+}
+
+.inputs p{
+    height: 20px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.name{
+    width: 75vh;
+    height: 40px;
+    padding: 5px 0px 5px 20px;
+}
+
+.pino{
+    width: 75vh;
+    height: 40px;
+    padding: 5px 0px 5px 20px;
+}
+.botao button{
+    background-color: var(--main-green);
+    padding: 20px 90px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 28vh;
+    cursor: pointer;
+    font-size: 1.2em;
+
+}
+@keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+}

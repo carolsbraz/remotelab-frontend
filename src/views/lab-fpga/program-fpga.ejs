@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel=stylesheet href="/lab-fpga/css/program.css">
+  <link rel="stylesheet" href="/lab-fpga/css/codemirror.css">
+  <link rel="stylesheet" href="/lab-fpga/css/switchs.css">
+  <link rel="stylesheet" href="/lab-fpga/css/modal.css">
+  <link rel="stylesheet" href="/lab-fpga/css/led.css">
+  <link rel="stylesheet" href="/lab-fpga/css/toggle.css">
+  <link rel=stylesheet href="/lab-fpga/css/responsivity/program-responsivy.css">
+  <link rel="stylesheet" href="/general/css/scrollbar.css">
+
+  <%- include('../partials/css-basic')%>
+
+  <link rel="stylesheet" href="/general/css/partials/user-card.css">
+  <link rel="stylesheet" href="/general/css/partials/lab-card.css">
+  <link rel="stylesheet" href="/general/css/partials/table-line.css">
+  <link rel="stylesheet" href="/general/css/partials/resp-user-card.css">
+
+
+
+
+
+  <script src="/lab-fpga/js/codemirror.js"></script>
+  <script src="/lab-fpga/js/matchbrackets.js"></script>
+  <script src="/lab-fpga/js/vhdl.js"></script>
+  <script src="/lab-fpga/js/CodeController.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js "></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
+    integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <style>
+    .CodeMirror {
+      border-top: 1px solid #c9c0c0;
+      border-bottom: 1px solid #c9c0c0;
+      border-radius: 10px;
+      width: 700px;
+    }
+  </style>
+  <title>VHDL </title>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+   
+
+
+  <div class="all" >
+    <%- include('../partials/navbar', {logo: "/lab-fpga/img/logo-lab-fpga.svg" }) %>
+
+  <div class="section">
+    <!--LED 01-->
+
+    <div class = "teste">
+        <input type="checkbox" id="teste">
+        <label for="teste">
+            <span></span>
+        </label>
+
+</div>
+    <div onclick="abrir9()" class="btn9">
+        <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+        </div>
+        
+        <div id="mymodal9" class="popup9">
+            <div class="modal9">
+                <div onclick="fechar9()" class="fechar">&times;</div>
+                <div class="config">
+                    <h1>Led 01</h1>
+                    <br>
+                    <div class="inputs">
+                        <p>Nome</p>
+                        <input type="text" placeholder="Nome" 
+                        id="nameid" name="nameid" class="name">
+                        <br>
+                        <p>Pino</p>
+                        <input type="text" placeholder="Pinagem" 
+                        id="pinoid" name="pinoid" class="pino">
+                    </div>
+                    <div onclick="fechar9()" class="botao">
+                        <button>Salvar</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    <!--LED 02-->
+    <div class = "teste">
+        <input type="checkbox" id="teste">
+        <label for="teste">
+            <span></span>
+        </label>
+    </div>
+
+    <div onclick="abrir10()" class="btn10">
+        <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+        </div>
+        
+        <div id="mymodal10" class="popup10">
+            <div class="modal10">
+                <div onclick="fechar10()" class="fechar">&times;</div>
+                <div class="config">
+                    <h1>Led 02</h1>
+                    <br>
+                    <div class="inputs">
+                        <p>Nome</p>
+                        <input type="text" placeholder="Nome" 
+                        id="nameid" name="nameid" class="name">
+                        <br>
+                        <p>Pino</p>
+                        <input type="text" placeholder="Pinagem" 
+                        id="pinoid" name="pinoid" class="pino">
+                    </div>
+                    <div onclick="fechar10()" class="botao">
+                        <button>Salvar</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    <!--LED 03-->
+    <div class = "teste">
+        <input type="checkbox" id="teste">
+        <label for="teste">
+            <span></span>
+        </label>
+    </div>
+    <div onclick="abrir11()" class="btn11">
+        <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+        </div>
+        
+        <div id="mymodal11" class="popup11">
+            <div class="modal11">
+                <div onclick="fechar11()" class="fechar">&times;</div>
+                <div class="config">
+                    <h1>Led 03</h1>
+                    <br>
+                    <div class="inputs">
+                        <p>Nome</p>
+                        <input type="text" placeholder="Nome" 
+                        id="nameid" name="nameid" class="name">
+                        <br>
+                        <p>Pino</p>
+                        <input type="text" placeholder="Pinagem" 
+                        id="pinoid" name="pinoid" class="pino">
+                    </div>
+                    <div onclick="fechar11()" class="botao">
+                        <button>Salvar</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    <!--LED 04-->
+    <div class = "teste">
+        <input type="checkbox" id="teste">
+        <label for="teste">
+            <span></span>
+        </label>
+    </div>
+    <div onclick="abrir12()" class="btn12">
+        <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+        </div>
+        
+        <div id="mymodal12" class="popup12">
+            <div class="modal12">
+                <div onclick="fechar12()" class="fechar">&times;</div>
+                <div class="config">
+                    <h1>Led 04</h1>
+                    <br>
+                    <div class="inputs">
+                        <p>Nome</p>
+                        <input type="text" placeholder="Nome" 
+                        id="nameid" name="nameid" class="name">
+                        <br>
+                        <p>Pino</p>
+                        <input type="text" placeholder="Pinagem" 
+                        id="pinoid" name="pinoid" class="pino">
+                    </div>
+                    <div onclick="fechar12()" class="botao">
+                        <button>Salvar</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+        <div class = "teste">
+            <input type="checkbox" id="teste">
+            <label for="teste">
+                <span></span>
+            </label>
+        </div>
+        <div onclick="abrir12()" class="btn12">
+            <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+            </div>
+            
+            <div id="mymodal12" class="popup12">
+                <div class="modal12">
+                    <div onclick="fechar12()" class="fechar">&times;</div>
+                    <div class="config">
+                        <h1>Led 04</h1>
+                        <br>
+                        <div class="inputs">
+                            <p>Nome</p>
+                            <input type="text" placeholder="Nome" 
+                            id="nameid" name="nameid" class="name">
+                            <br>
+                            <p>Pino</p>
+                            <input type="text" placeholder="Pinagem" 
+                            id="pinoid" name="pinoid" class="pino">
+                        </div>
+                        <div onclick="fechar12()" class="botao">
+                            <button>Salvar</button>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+            <div class = "teste">
+                <input type="checkbox" id="teste">
+                <label for="teste">
+                    <span></span>
+                </label>
+            </div>
+            <div onclick="abrir12()" class="btn12">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+                
+                <div id="mymodal12" class="popup12">
+                    <div class="modal12">
+                        <div onclick="fechar12()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Led 04</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div onclick="fechar12()" class="botao">
+                                <button>Salvar</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class = "teste">
+                    <input type="checkbox" id="teste">
+                    <label for="teste">
+                        <span></span>
+                    </label>
+                </div>
+                <div onclick="abrir12()" class="btn12">
+                    <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                    </div>
+                    
+                    <div id="mymodal12" class="popup12">
+                        <div class="modal12">
+                            <div onclick="fechar12()" class="fechar">&times;</div>
+                            <div class="config">
+                                <h1>Led 04</h1>
+                                <br>
+                                <div class="inputs">
+                                    <p>Nome</p>
+                                    <input type="text" placeholder="Nome" 
+                                    id="nameid" name="nameid" class="name">
+                                    <br>
+                                    <p>Pino</p>
+                                    <input type="text" placeholder="Pinagem" 
+                                    id="pinoid" name="pinoid" class="pino">
+                                </div>
+                                <div onclick="fechar12()" class="botao">
+                                    <button>Salvar</button>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "teste">
+                        <input type="checkbox" id="teste">
+                        <label for="teste">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div onclick="abrir12()" class="btn12">
+                        <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                        </div>
+                        
+                        <div id="mymodal12" class="popup12">
+                            <div class="modal12">
+                                <div onclick="fechar12()" class="fechar">&times;</div>
+                                <div class="config">
+                                    <h1>Led 04</h1>
+                                    <br>
+                                    <div class="inputs">
+                                        <p>Nome</p>
+                                        <input type="text" placeholder="Nome" 
+                                        id="nameid" name="nameid" class="name">
+                                        <br>
+                                        <p>Pino</p>
+                                        <input type="text" placeholder="Pinagem" 
+                                        id="pinoid" name="pinoid" class="pino">
+                                    </div>
+                                    <div onclick="fechar12()" class="botao">
+                                        <button>Salvar</button>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+    </div>
+<div class="chave">
+    <div class='checkboxGroup'>
+        <div class="group">
+        <label class='checkboxControl'>
+            <input type='checkbox' />
+            <div>ΟΙ</div><b></b>
+            <span class='indicator'></span>
+        </label>
+        </div>
+
+        <div onclick="abrir2()" class="btn2">
+            <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+            </div>
+
+            <div id="mymodal2" class="popup2">
+                <div class="modal2">
+                    <div onclick="fechar2()" class="fechar">&times;</div>
+                    <div class="config">
+                        <h1>Switch 02</h1>
+                        <br>
+                        <div class="inputs">
+                            <p>Nome</p>
+                            <input type="text" placeholder="Nome" 
+                            id="nameid" name="nameid" class="name">
+                            <br>
+                            <p>Pino</p>
+                            <input type="text" placeholder="Pinagem" 
+                            id="pinoid" name="pinoid" class="pino">
+                        </div>
+                        <div class="botao">
+                            <button>Salvar</button>
+                        </div>
+            
+                    </div>
+                </div>
+        </div>
+    </div>
+
+        
+                
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+
+            <div onclick="abrir2()" class="btn2">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+
+                <div id="mymodal2" class="popup2">
+                    <div class="modal2">
+                        <div onclick="fechar2()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 02</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+            <div onclick="abrir3()" class="btn3">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+                <div id="mymodal3" class="popup3">
+                    <div class="modal3">
+                        <div onclick="fechar3()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 03</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>    
+        </div>
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+
+            <div onclick="abrir4()" class="btn4">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+                <div id="mymodal4" class="popup4">
+                    <div class="modal4">
+                        <div onclick="fechar4()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 04</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+                
+                
+        </div>
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+                <div onclick="abrir5()" class="btn5">
+                    <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                    </div>
+                
+                <div id="mymodal5" class="popup5">
+                    <div class="modal5">
+                        <div onclick="fechar5()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 05</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div> 
+                </div>
+        </div>
+
+
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+            <div onclick="abrir6()" class="btn6">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+            
+                <div id="mymodal6" class="popup6">
+                    <div class="modal6">
+                        <div onclick="fechar6()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 06</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div> 
+                </div>
+        </div>
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+            <div onclick="abrir7()" class="btn7">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+                <div id="mymodal7" class="popup7">
+            
+                    <div class="modal7">
+                        <div onclick="fechar7()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 07</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div> 
+                </div>
+        </div>
+
+        <div class='checkboxGroup'>
+            <div class="group">
+            <label class='checkboxControl'>
+                <input type='checkbox' />
+                <div>ΟΙ</div><b></b>
+                <span class='indicator'></span>
+            </label>
+            </div>
+
+            <div onclick="abrir8()" class="btn8">
+                <img src="/lab-fpga/img/arrow_drop_down_black_24dp.svg" alt="icone">
+                </div>
+                
+                <div id="mymodal8" class="popup8">
+                    <div class="modal8">
+                        <div onclick="fechar8()" class="fechar">&times;</div>
+                        <div class="config">
+                            <h1>Switch 08</h1>
+                            <br>
+                            <div class="inputs">
+                                <p>Nome</p>
+                                <input type="text" placeholder="Nome" 
+                                id="nameid" name="nameid" class="name">
+                                <br>
+                                <p>Pino</p>
+                                <input type="text" placeholder="Pinagem" 
+                                id="pinoid" name="pinoid" class="pino">
+                            </div>
+                            <div class="botao">
+                                <button>Salvar</button>
+                            </div>
+                
+                        </div>
+                    </div> 
+                </div>
+            </div>
+    </div>
+
+  <div class="prog">
+  <article>
+    <h2>Codificação vhdl</h2>
+    <div class="form">
+        <form class="container" method="post" action="/">
+            <div class="form-group">
+                <textarea class="codemirror-textarea" id="code" name="codigo"></textarea>
+            </div>
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    mode: {
+                        name: "vhdl"
+                    }
+                });
+                var codigo = editor.getValue();
+
+                function alertar(){
+                    alert("Codigo enviado com sucesso!");
+                }
+                
+            </script>
+        </form>
+        <button type="submit" onclick="alertar()" class="play"><img src="/lab-fpga/img/run.svg" alt="Icone start"></button>
+</article>
+</div>
+</div>
+
+
+
+
+<div class="camera">
+    <img src="/lab-fpga/img/fpgade1.jpg" alt="Imagem fpga">
+    <div class="circulo"> 
+    </div>
+  </div>
+
+<script src="/lab-fpga/js/modal.js"></script>
+</div>
+</body>
+
+</html>

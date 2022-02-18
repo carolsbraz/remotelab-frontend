@@ -1,0 +1,44 @@
+.section{
+  display: flex;
+  margin-top: -20px;
+  margin-left: 150px;
+}
+
+
+.teste{
+  height: 2.5em;
+  width: 2.5em;
+  opacity: 0.6;
+  background: #bfc7d1;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7em;
+  border-radius: 3em;
+  box-shadow: 4px 4px 30px rgb(0 0 0 / 5%), 5px 5px 10px rgb(0 0 0 / 5%);
+  transform: rotate(90deg);
+  margin-block-start: 50px;
+  margin-right: 50px;
+  }
+  .teste label span{
+    display: flex;
+    width: 140%;
+    height: 140%;
+    perspective: 10em;
+    background: #FFFFFF;
+    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 7px rgb(156 156 156 / 48%);
+    border-radius: 30px;
+    margin-top: -4px;
+    margin-left: -3px;
+
+  }
+  
+  #teste{
+    position:  absolute;
+    visibility: hidden;
+    margin-right: 30px;
+  
+  }
+
+
+
+

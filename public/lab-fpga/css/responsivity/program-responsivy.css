@@ -1,0 +1,436 @@
+
+/*Laptop*/
+@media (max-width: 1024px) {
+  body{
+    display: grid;
+  }
+  .navbar{
+    height: 120vh;
+  }
+  .camera{
+    margin-left: 165vh;
+    margin-top: -180vh;
+  }
+  .prog{
+    margin-top: 100px;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+  .prog{
+    margin-left: 20px;
+    margin-top: 40px;
+
+
+}
+  article{
+    margin: 0 0 0 1px;
+    width: 700px;
+}
+h2{
+  width: 600px;
+  padding: 10px 200px 10px;
+}
+.CodeMirror {
+  width: 600px;
+}
+div .form{
+  width: 600px;
+}
+.CodeMirror-scroll{
+  width: 600px;
+}
+.play{
+  padding: 10px 290px 10px;
+}
+  .section{
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .chave{
+    margin-left: 20px;
+  }
+  .camera{
+    padding: 20px;
+    margin-left: 40vh;
+    margin-top: -20vh;
+
+  }
+  .camera img{
+    width: 38vh;
+    height: 40vh;
+    padding: 10px
+  }
+
+
+}
+
+/*Mobile L*/
+@media (max-width: 425px) {
+
+
+    .section img{
+      width: 15px;
+    }
+
+    .btn2{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn3{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn4{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn5{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn6{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn7{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn8{
+      height: 20px;
+      margin-left: -30px;
+      margin-top: 10px;
+    }
+    .btn9{
+      height: 25px;
+      margin-left: -30px;
+      margin-top: 25px;
+      margin-right: 3px;
+    }
+    .btn10{
+      height: 25px;
+      margin-left: -30px;
+      margin-top: 25px;
+      margin-right: 3px;
+    }
+    .btn11{
+      height: 25px;
+      margin-left: -30px;
+      margin-top: 25px;
+      margin-right: 3px;
+    
+    }
+    .modal{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal2{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal3{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal4{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal5{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal6{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal7{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+
+    .modal8{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal9{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal10{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal11{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal12{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal13{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal14{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal15{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .modal16{
+      margin-left: -10vh;
+      width: 50vh;
+      height: 400px;
+    }
+    .config{
+      padding: 0px 20px;
+
+    }
+    .config h1{
+      justify-content: center;
+      margin-left: 90px;
+      display: block;
+    }
+    .name{
+      width: 40vh;
+    }
+    .pino{
+      width: 40vh;
+    }
+    .botao button{
+      margin-left: 5vh;
+      padding: 10px 60px;
+    }
+    .section {
+      width: 50px;
+      padding: 2px;
+      margin-top: 25px;
+      margin-left: 30px;
+    }
+    .chave {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      margin-left: 5px;
+      }
+    .chave img{
+      width: 15px;
+    }
+    .prog
+    {
+      margin-top: 100px;
+      margin-left: 50px;
+ 
+    }
+    .play
+    {
+      padding: 10px 150px 10px;
+    }
+    .checkboxControl {
+      width: 50px;
+      border-radius: 7px;
+    }
+
+    .checkboxControl > div{
+      line-height: 30px;
+      height: 30px;
+      width: 46px;
+      text-shadow: 0 1px rgb(22 21 21 / 2%);
+    }
+    .checkboxControl .indicator{
+
+      top: 5px;
+      right: -22px;
+      width: 7px;
+      height: 20px;
+
+    }
+
+  h2{
+    padding: 0px 70px 0px;
+    width: 300px;
+    font-size: 0.9rem;
+  }
+  article{
+    margin: 0 0 0 -50px;
+    width: 400px;
+  }
+
+
+  .CodeMirror{
+    height: 60vh;
+    width: 320px;
+    margin-left: -10px;
+  }
+  .CodeMirror-lines {
+    font-size: 0.6rem;
+  }
+  div .form{
+    width: 300px;
+  }
+    .camera{
+      margin-top: -20vh;
+      margin-left: 10vh;
+      padding: 10px;
+    }
+    .camera img{
+      height: 40vh;
+      padding-left: 30px;
+      padding-right: 20px;
+      margin-top: 20px;
+    }
+    .teste{
+      height: 1.5em;
+      width: 1.5em;
+      margin-right: 25px;
+    }
+    .teste label span {
+      width: 15px;
+      height: 18px;
+      border-radius: 30px;
+      margin-top: -8px;
+      margin-left: -7px;
+  }
+    .group{
+      width: 65px;
+    }
+
+}
+
+/*Mobile M*/
+@media (max-width: 375px) {
+  .teste{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 30px;
+  }
+
+
+  .checkboxControl {
+    width: 50px;
+    border-radius: 7px;
+  }
+
+  .checkboxControl > div{
+    line-height: 30px;
+    height: 30px;
+    width: 46px;
+    text-shadow: 0 1px rgb(22 21 21 / 2%);
+  }
+  .checkboxControl .indicator{
+    position: absolute;
+    top: 5px;
+    right: -14px;
+    width: 7px;
+    height: 20px;
+
+  }
+  div .form{
+    width: 200px;
+  }
+  article{
+    width: 370px;
+  }
+
+  .CodeMirror {
+    width: 320px;
+}
+  .camera{
+    padding: 20px;
+    margin-left: 10vh;
+    margin-top: -120px;
+  }
+  .play
+  {
+    padding: 10px 80px 10px;
+  }
+  .group{
+    width: 60px;
+  }
+
+  .container{
+    width: 200px;
+  }
+}
+
+/*Mobile S*/
+@media (max-width: 320px) {
+  .teste{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 25px;
+  }
+  .checkboxControl {
+    width: 50px;
+    border-radius: 7px;
+  }
+h2{
+  width: 200px;
+}
+  .checkboxControl > div{
+    line-height: 30px;
+    height: 25px;
+    width: 46px;
+    text-shadow: 0 1px rgb(22 21 21 / 2%);
+  }
+  .checkboxControl .indicator{
+    position: absolute;
+    top: 5px;
+    right: -14px;
+    width: 7px;
+    height: 20px;
+
+  }
+  div .form{
+    width: 200px;
+  }
+  article{
+    width: 320px;
+  }
+
+  .CodeMirror {
+    width: 250px;
+}
+  .camera{
+    margin-left: 10vh;
+    margin-top: -120px;
+  }
+  .play
+  {
+    padding: 10px 80px 10px;
+  }
+  .group{
+    width: 50px;
+  }
+
+  .container{
+    width: 200px;
+  }
+}

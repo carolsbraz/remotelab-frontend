@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+:root {
+    --main-green: #1C5B36;
+    --secondary-green: #4E7F63;
+    --text-color: #666666;
+}
+body{
+  display: flex;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(//themes.googleusercontent.com/static/fonts/sourcesanspro/v5/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
+
+section, article { 
+  display: block; 
+  padding: 0; 
+}
+
+h2, h3, h1 {
+  font-weight: normal;
+  margin-bottom: .7em;
+}
+h1 { font-size: 140%; }
+h2 { font-size: 120%; }
+h3 { font-size: 110%; }
+
+h2{
+  color: var(--main-green);
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0px 200px;
+}
+
+
+article {
+  margin: 0 0 0 160px;
+  padding: 0px 50px 20px 50px;
+  background: white;
+  position: relative;
+  min-height: 90%;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 4px 4px 30px rgb(0 0 0 / 5%), 5px 5px 10px rgb(0 0 0 / 5%);
+  display: grid;
+  width: 800px;
+
+}
+
+.play{
+  border: none;
+  outline: none;
+  display: block;
+  padding: 0px 330px;
+  cursor: pointer;
+  background: transparent;
+}
+.play img{
+  height: 60px;
+}
+
+.prog{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 150px;
+
+}
+
+.camera{
+  background: white;
+  height: 50vh;
+  margin-left: 30px;
+  width: 50vh;
+  display: flex;
+  transform: translateY(65%);
+  border-radius: 30px;
+  box-shadow: 4px 4px 30px rgb(0 0 0 / 5%), 5px 5px 10px rgb(0 0 0 / 5%);
+}
+.camera img{
+  width: 45vh;
+  height: 45vh;
+  /* padding: 30px; */
+
+  box-shadow: 4px 4px 30px rgb(0 0 0 / 5%), 5px 5px 10px rgb(0 0 0 / 5%);
+  border-radius: 20px;
+}
+
+.circulo{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 20px 50px;
+  position: absolute;
+  bottom: 0;
+
+}
+
+@media screen and (min-width: 1000px) {
+  article {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .actions {
+    padding-top: 120px;
+  }
+  .actionsleft, .actionsright {
+    float: none;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+}
+
