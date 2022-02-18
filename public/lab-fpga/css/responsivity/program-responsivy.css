@@ -286,11 +286,11 @@ div .form{
 
   .CodeMirror{
     height: 60vh;
-    width: 320px;
+    width: 320px !important;
     margin-left: -10px;
   }
   .CodeMirror-lines {
-    font-size: 0.6rem;
+    font-size: 1.6rem;
   }
   div .form{
     width: 300px;
@@ -309,7 +309,7 @@ div .form{
     .teste{
       height: 1.5em;
       width: 1.5em;
-      margin-right: 25px;
+      margin-right: 35px;
     }
     .teste label span {
       width: 15px;

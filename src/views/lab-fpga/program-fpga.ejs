@@ -61,11 +61,6 @@
 
 <body>
 
-
-
-   
-
-
   <div class="all" >
     <%- include('../partials/navbar', {logo: "/lab-fpga/img/logo-lab-fpga.svg" }) %>
 
@@ -635,6 +630,7 @@
             <div class="form-group">
                 <textarea class="codemirror-textarea" id="code" name="codigo"></textarea>
             </div>
+            <button type="submit" onclick="alertar()" class="play"><img src="/lab-fpga/img/run.svg" alt="Icone start"></button>
             <script>
                 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                     lineNumbers: true,
@@ -651,7 +647,7 @@
                 
             </script>
         </form>
-        <button type="submit" onclick="alertar()" class="play"><img src="/lab-fpga/img/run.svg" alt="Icone start"></button>
+        
 </article>
 </div>
 </div>
