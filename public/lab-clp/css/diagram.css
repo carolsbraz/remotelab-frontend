@@ -105,3 +105,31 @@ div#valores-out{
     justify-content: space-around;
 }
 
+.noUi-handle{
+    background-color: rgb(150, 60, 60) !important;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(255, 255, 255) 50%); 
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.noUi-handle-invert{
+    background-color: rgb(255, 255, 255) !important;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgb(150, 60, 60) 50%) !important;
+}
+
+.noUi-handle::after{
+    background-color: #5c5c5c00 !important;
+}
+
+.noUi-handle::before{
+    background-color: #5c5c5c00 !important;
+}
+
+/* blocks */
+
+.drag-blocks .blocks .block #txt-CA-var, .drag-blocks .blocks .block #txt-CF-var,
+.drag-blocks .blocks .block #txt-BA-var, .drag-blocks .blocks .block #txt-BF-var{
+    display: none;
+}

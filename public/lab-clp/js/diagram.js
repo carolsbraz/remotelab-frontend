@@ -1,7 +1,17 @@
 var divsNum = 1;
 var divsNumOut = 1;
 
-let send = { "qtVars": 0, "devVars" :{ "input" : { "digital":[ ] },"output":{"digital":[{"id": 1,"port": 0}]}},}
+var idDigIn = 0;
+var idAnaIn = 0;
+var idDigOut = 0;
+var idAnaOut = 0;
+
+let send = {
+    "qtVars": 0,
+    "devVars": {
+
+    }
+}
 
 var vars = []
 
@@ -14,18 +24,18 @@ function criarSlider(divNum) {
     var divs = []
     var tooltips = []
     var inicio = 0;
-    if(divNum == 1){
+    if (divNum == 1) {
         inicio = 250
-    }else{
-        inicio = 500/(divNum+1)
+    } else {
+        inicio = 500 / (divNum + 1)
     }
-    
+
     var marcador = inicio
 
     for (let index = 0; index < divNum; index++) {
         divs.push(inicio)
         tooltips.push(true)
-        inicio += marcador 
+        inicio += marcador
 
         criarSelect(index)
     }
@@ -54,18 +64,18 @@ function criarSliderOut(divNum) {
     var divs = []
     var tooltips = []
     var inicio = 0;
-    if(divNum == 1){
+    if (divNum == 1) {
         inicio = 250
-    }else{
-        inicio = 500/(divNum+1)
+    } else {
+        inicio = 500 / (divNum + 1)
     }
-    
+
     var marcador = inicio
 
     for (let index = 0; index < divNum; index++) {
         divs.push(inicio)
         tooltips.push(true)
-        inicio += marcador 
+        inicio += marcador
 
         criarSelectOut(index)
     }
@@ -89,73 +99,75 @@ criarSlider(divsNum)
 
 criarSliderOut(divsNumOut)
 
-function criarSelect(number){
+function criarSelect(number) {
     const select = document.createElement('select');
     select.setAttribute("name", `var-ana-value-${number}`)
     select.setAttribute("id", `var-ana-value-${number}`)
 
     const option0 = document.createElement('option');
     option0.setAttribute("value", `0`)
-    option0.innerHTML="0"
+    option0.innerHTML = "0"
 
     const option1 = document.createElement('option');
     option1.setAttribute("value", `1`)
-    option1.innerHTML="1"
+    option1.innerHTML = "1"
 
     select.appendChild(option0)
     select.appendChild(option1)
-    
+
     const selects = document.getElementById('valores')
     selects.appendChild(select)
 }
 
-function criarSelectOut(number){
+function criarSelectOut(number) {
     const select = document.createElement('select');
     select.setAttribute("name", `var-ana-out-value-${number}`)
     select.setAttribute("id", `var-ana-out-value-${number}`)
 
     const option0 = document.createElement('option');
     option0.setAttribute("value", `0`)
-    option0.innerHTML="0"
+    option0.innerHTML = "0"
 
     const option1 = document.createElement('option');
     option1.setAttribute("value", `1`)
-    option1.innerHTML="1"
+    option1.innerHTML = "1"
 
     select.appendChild(option0)
     select.appendChild(option1)
-    
+
     const selects = document.getElementById('valores-out')
     selects.appendChild(select)
 }
 
-function addDiv(){
+function addDiv() {
     var mergingTooltipSlider = document.getElementById('merging-tooltips');
     mergingTooltipSlider.noUiSlider.destroy()
     divsNum++
     criarSlider(divsNum)
+    recarregaClickHandle()
 }
-function removeDiv(){
-    if(divsNum > 1 ){
+function removeDiv() {
+    if (divsNum > 1) {
         var mergingTooltipSlider = document.getElementById('merging-tooltips');
-    mergingTooltipSlider.noUiSlider.destroy()
-    divsNum--
-    criarSlider(divsNum)
+        mergingTooltipSlider.noUiSlider.destroy()
+        divsNum--
+        criarSlider(divsNum)
     }
 }
 
-function addDivOut(){
+function addDivOut() {
     var mergingTooltipSlider = document.getElementById('merging-tooltips-out');
     mergingTooltipSlider.noUiSlider.destroy()
     divsNumOut++
     criarSliderOut(divsNumOut)
+    recarregaClickHandle()
 }
-function removeDivOut(){
-    if(divsNum > 1 ){
+function removeDivOut() {
+    if (divsNum > 1) {
         var mergingTooltipSlider = document.getElementById('merging-tooltips-out');
-    mergingTooltipSlider.noUiSlider.destroy()
-    divsNumOut--
-    criarSliderOut(divsNumOut)
+        mergingTooltipSlider.noUiSlider.destroy()
+        divsNumOut--
+        criarSliderOut(divsNumOut)
     }
 }
 
@@ -343,7 +355,7 @@ selectType.addEventListener('change', () => {
     }
 })
 
-function preencherDispositivos(){
+function preencherDispositivos() {
     instance.get(`/plc`, { params: { reference: localStorage.getItem('reference') } })
         .then((res) => {
 
@@ -361,29 +373,29 @@ function preencherDispositivos(){
             digIN.forEach(el => {
                 const option = document.createElement('option');
                 option.setAttribute('value', `${el.port}`)
-                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}` 
-                
+                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}`
+
                 selectInDig.appendChild(option)
             });
 
             anaIN.forEach(el => {
                 const option = document.createElement('option');
                 option.setAttribute('value', `${el.port}`)
-                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}` 
+                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}`
                 selectInAna.appendChild(option)
             });
 
             digOUT.forEach(el => {
                 const option = document.createElement('option');
                 option.setAttribute('value', `${el.port}`)
-                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}` 
+                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}`
                 selectOutDig.appendChild(option)
             });
 
             anaOUT.forEach(el => {
                 const option = document.createElement('option');
                 option.setAttribute('value', `${el.port}`)
-                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}` 
+                option.innerHTML = `PORTA: ${el.port} | MODELO: ${el.model}`
                 selectOutAna.appendChild(option)
             });
 
@@ -396,16 +408,238 @@ function preencherDispositivos(){
 
 preencherDispositivos()
 
-// criar variável
+// criar ramos no objeto
 
-function createVar(){
-   this.Atributo1 = "Primeiro Atributo"; //atributo público
-   var Atributo2 = "Segundo Atributo"; //atributo privado
-   this.ValorConcatenado = this.Atributo1 + " - " + Atributo2; //atributo publico;
-  }
-var meuObj = new DefinicaoObjeto(); // momento de criação do JSON
+function createIn(vari) {
+    vari.devVars["input"] = {}
+}
+
+function createOut(vari) {
+    vari.devVars.output = {}
+}
+
+function createDigIn(vari) {
+    vari.devVars.input.digital = []
+}
+
+function createAnaIn(vari) {
+    vari.devVars.input.analog = []
+}
+
+function createDigOut(vari) {
+    vari.devVars.output.digital = []
+}
+
+function createAnaOut(vari) {
+    vari.devVars.output.analog = []
+}
+
+// inserir variáveis
+
+function addDigIn(vari) {
+    const port = document.getElementById('disp-model-in-dig').value
+    const dataVar = { 'id': send.qtVars, "port": port }
+    vari.devVars.input["digital"].push(dataVar)
+
+    var nome = document.getElementById('var-name').value
+
+    vars.push([send.qtVars, nome, "IN DIG"])
+
+    listarVars()
+
+    send.qtVars += 1;
 
 
+}
+
+function addAnaIn(vari) {
+
+    const port = document.getElementById('disp-model-in-ana').value
+    const dataVar = { 'id': send.qtVars, "port": port }
+
+    dataVar.extras = {}
+
+    dataVar.extras.divs = []
+
+    const divs = document.querySelectorAll('.noUi-tooltip')
+
+    console.log(divs)
+
+    var contador = 0
+
+
+    divs.forEach(div => {
+
+        if (contador < divsNum) {
+
+            dataVar.extras.divs.push(div.innerText)
+
+            contador++
+        }
+
+    })
+
+    
+
+    const selects = document.querySelectorAll('#valores select')
+
+    var zonesSelec = ""
+
+    selects.forEach(select => {
+
+        zonesSelec += `${select.value}`
+
+    })
+
+    dataVar.extras.zones = zonesSelec
+
+    // dominancias
+
+    var domi = ""
+
+    const handles = document.querySelectorAll('.noUi-handle')
+
+    handles.forEach(handle => {
+
+            if (handle.classList.contains('noUi-handle-invert')) {
+                domi += "1"
+            } else {
+                domi += "0"
+            }
+
+    });
+    
+    dataVar.extras.dominances = domi
+
+    console.log(vari)
+
+
+
+    vari.devVars.input.analog.push(dataVar)
+
+
+
+    var nome = document.getElementById('var-name').value
+
+    vars.push([send.qtVars, nome, "IN ANA"])
+
+    listarVars()
+
+    send.qtVars += 1;
+}
+
+function addDigOut(vari) {
+
+    const port = document.getElementById('disp-model-out-dig').value
+    const dataVar = { 'id': send.qtVars, "port": port }
+    vari.devVars.output.digital.push(dataVar)
+
+    var nome = document.getElementById('var-name').value
+
+    vars.push([send.qtVars, nome, "OUT DIG"])
+
+    listarVars()
+
+    send.qtVars += 1;
+}
+
+function addAnaOut(vari) {
+
+    const port = document.getElementById('disp-model-out-ana').value
+    const dataVar = { 'id': send.qtVars, "port": port }
+    vari.devVars.output.digital.push(dataVar)
+
+    var nome = document.getElementById('var-name').value
+
+    vars.push([send.qtVars, nome, "OUT ANA"])
+
+    listarVars()
+
+    send.qtVars += 1;
+}
+
+// funcao adicionar variavel
+
+function addVar() {
+    const typeVar = document.getElementById('var-type').value
+
+    if (typeVar == "IN-DIG") {
+        try {
+            addDigIn(send)
+        } catch (error) {
+            try {
+                createDigIn(send)
+                addDigIn(send)
+            } catch (error) {
+                createIn(send)
+                createDigIn(send)
+                addDigIn(send)
+            }
+        }
+        console.log(send)
+    } else if (typeVar == "IN-ANA") {
+        try {
+            addAnaIn(send)
+        } catch (error) {
+            try {
+                createAnaIn(send)
+                addAnaIn(send)
+            } catch (error) {
+                try {
+                    addAnaIn(send)
+                } catch (error) {
+                    createIn(send)
+                    createAnaIn(send)
+                    addAnaIn(send)
+                }
+            }
+
+
+        }
+        console.log(send)
+    } else if (typeVar == "OUT-DIG") {
+        try {
+            addDigOut(send)
+        } catch (error) {
+            try {
+                createDigOut(send)
+                addDigOut(send)
+            } catch (error) {
+                try {
+                    addDigOut(send)
+                } catch (error) {
+                    createOut(send)
+                    createDigOut(send)
+                    addDigOut(send)
+                }
+            }
+
+
+        }
+        console.log(send)
+    } else if (typeVar == "OUT-ANA") {
+        try {
+            addAnaOut(send)
+        } catch (error) {
+            try {
+                createDigOut(send)
+                addAnaOut(send)
+            } catch (error) {
+                try {
+                    addAnaOut(send)
+                } catch (error) {
+                    createOut(send)
+                    createAnaOut(send)
+                    addAnaOut(send)
+                }
+            }
+
+
+        }
+        console.log(send)
+    }
+
+}
 
 const drag = document.querySelectorAll('div.blocks')
 console.log(drag)
@@ -430,19 +664,21 @@ drag.forEach(block => {
             boxs.forEach(box => {
                 box.classList.remove("dotted")
             })
+
+            updateSelects()
         },
         onMove: function (evt) {
             if (evt.to.querySelectorAll('.block').length >= 1) {
-              return false;
+                return false;
             }
-            if (evt.to.classList.contains(`${totalDivs-1}`) && evt.from.classList.contains(`C`) ) {
+            if (evt.to.classList.contains(`${totalDivs - 1}`) && evt.from.classList.contains(`C`)) {
                 return false;
-              }
+            }
 
-              if (!(evt.to.classList.contains(`${totalDivs-1}`)) && evt.from.classList.contains(`B`) ) {
+            if (!(evt.to.classList.contains(`${totalDivs - 1}`)) && evt.from.classList.contains(`B`)) {
                 return false;
-              }
-          }
+            }
+        }
     });
 })
 
@@ -450,7 +686,7 @@ const drop = document.getElementById('data')
 
 
 
-function newLine(){
+function newLine() {
     const line = document.createElement('div');
     line.classList.add('line')
 
@@ -467,7 +703,7 @@ function newLine(){
 
     console.log(width)
 
-    var totDivs = parseInt(`${width/80}`, 10)
+    var totDivs = parseInt(`${width / 80}`, 10)
 
     totalDivs = totDivs
 
@@ -483,7 +719,141 @@ function newLine(){
 
         line.appendChild(dropBlock)
 
-        
+
     }
 
+}
+
+
+function recarregaClickHandle() {
+    const handles = document.querySelectorAll('.noUi-handle')
+
+    handles.forEach(handle => {
+
+        console.log(handle)
+
+        handle.addEventListener('click', () => {
+
+            console.log(handle)
+
+            if (handle.classList.contains('noUi-handle-invert')) {
+                handle.classList.remove('noUi-handle-invert')
+            } else {
+                handle.classList.add('noUi-handle-invert')
+            }
+
+        })
+
+    });
+}
+
+recarregaClickHandle()
+
+// listar vars
+
+function listarVars() {
+    const list = document.getElementById('list-vars')
+
+    list.innerHTML = ""
+
+    vars.forEach(vari => {
+        const tr = document.createElement('tr');
+        line = `<td>${vari[0]}</td><td>${vari[1]}</td><td>${vari[2]}</td>`
+        tr.innerHTML = line
+        list.appendChild(tr);
+    });
+
+}
+
+// vars nos selects
+
+function updateSelects() {
+    console.log('============ listando =================')
+    const selects = document.querySelectorAll('.lines .line .dropBlockBox .block .select-var')
+    selects.forEach(sel => {
+
+        if (sel.classList.contains('var-CA') || sel.classList.contains('var-CF')) {
+
+            sel.innerHTML = ""
+            vars.forEach(vari => {
+                if (vari[2] == "IN DIG" || vari[2] == "IN ANA") {
+
+                    const option = document.createElement('option');
+                    option.setAttribute('value', `${vari[0]}`)
+                    option.innerHTML = `ID: ${vari[0]}`
+
+                    sel.appendChild(option)
+
+                }
+            })
+
+        } else if (sel.classList.contains('var-BA') || sel.classList.contains('var-BF')) {
+            sel.innerHTML = ""
+            vars.forEach(vari => {
+                if (vari[2] == "OUT DIG" || vari[2] == "OUT ANA") {
+
+                    const option = document.createElement('option');
+                    option.setAttribute('value', `${vari[0]}`)
+                    option.innerHTML = `ID: ${vari[0]}`
+
+                    sel.appendChild(option)
+
+                }
+            })
+
+        }
+    })
+}
+
+
+// read diagram 
+
+function readDiagram() {
+    console.log('============ listando =================')
+
+    var diagram = ""
+
+    const lines = document.querySelectorAll('.lines .line ')
+    lines.forEach(line => {
+
+        diagram += "{"
+
+        const blocks = line.querySelectorAll('.dropBlockBox .block')
+
+        blocks.forEach(block => {
+            if (block.classList.contains("CA")) {
+                diagram += "CA"
+            } else if (block.classList.contains("CF")) {
+                diagram += "CF"
+            } else if (block.classList.contains("BA")) {
+                diagram += "BA"
+            } else if (block.classList.contains("BF")) {
+                diagram += "BF"
+            }
+
+            const idVar = block.querySelector(".select-var").value
+
+            diagram += idVar
+        })
+
+        diagram += "}"
+
+    })
+
+    return diagram
+}
+
+// enviar dados
+
+function sendData() {
+    send.diagram = readDiagram()
+    const json = JSON.stringify(send);
+    console.log(json)
+    console.log(localStorage.getItem("reference"))
+    instance.post(`/plc/program/`, send, { params: { reference: localStorage.getItem("reference") } })
+        .then((res) => {
+            console.log("DIAGRAMA ENVIADO!", res)
+        }).catch((err) => {
+            console.log("ERRO AO ENVIAR DIAGRAMA!", err.response)
+        });
 }
