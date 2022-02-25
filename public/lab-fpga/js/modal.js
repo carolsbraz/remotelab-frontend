@@ -233,3 +233,17 @@ function fechar17(){
     let mymodal17 = document.querySelector('.popup17');
     mymodal17.style.display = 'none';
 }
+
+function abrir18(){
+    let modal18 = document.querySelector('.modal18');
+    modal18.style.display = 'block';
+    let mymodal18 = document.querySelector('.popup18');
+    mymodal18.style.display = 'block';
+}
+
+function fechar18(){
+    let modal18 = document.querySelector('.modal18');
+    modal18.style.display = 'none';
+    let mymodal18 = document.querySelector('.popup18');
+    mymodal18.style.display = 'none';
+}

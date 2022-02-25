@@ -634,7 +634,7 @@
   <article>
     <h2>Codificação vhdl</h2>
     <div class="form">
-        <form class="container" method="post" action="/">
+        <form class="container" method="get" action="/program">
             <div class="form-group">
                 <textarea class="codemirror-textarea" id="code" name="codigo"></textarea>
             </div>
@@ -660,13 +660,25 @@
 </div>
 </div>
 
-
-
-
 <div class="camera">
-    <img src="/lab-fpga/img/fpgade1.jpg" alt="Imagem fpga">
-    <div class="circulo"> 
+    <div onclick="abrir18()" class="btn18">
+        Abrir camera
+        </div>
+    <div id="mymodal18" class="popup18">
+        <div class="modal18">
+            <div onclick="fechar18()" class="fechar">&times;</div>
+            <div class="config">
+                <div class="cam">
+                    <iframe src="http://192.168.0.12:3000/jsfs.html" frameborder="0" allowfullscreen></iframe>
+                </div> 
+                <div class="botao">
+                    <button onclick="fechar18()">Sair</button>
+                </div>
+    
+            </div>
+        </div> 
     </div>
+
   </div>
 
 <script src="/lab-fpga/js/modal.js"></script>
