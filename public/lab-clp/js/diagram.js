@@ -731,7 +731,6 @@ function newLine() {
     const line = document.createElement('div');
     line.classList.add('line')
 
-
     const hr = document.createElement('hr');
 
     line.appendChild(hr)
@@ -755,16 +754,33 @@ function newLine() {
 
         new Sortable(dropBlock, {
             group: 'shared',
-            animation: 150
+            animation: 150,
+            filter: ".dropBlockBoxParallel .block",
+            onStart: function (/**Event*/evt) {
+                document.getElementById('delete-block-area').style.display = 'unset'
+            },
+        
+            // Element dragging ended
+            onEnd: function (/**Event*/evt) {
+                document.getElementById('delete-block-area').style.display = 'none'
+            }
         });
 
         line.appendChild(dropBlock)
-
 
     }
 
 }
 
+const areaDeleteBlock = document.getElementById('delete-block-area')
+
+new Sortable(areaDeleteBlock, {
+    group: 'shared', 
+    animation: 150,
+    onAdd: function (evt) {
+        evt.item.parentNode.removeChild(evt.item);
+	}
+});
 
 function recarregaClickHandle() {
     const handles = document.querySelectorAll('.noUi-handle')
@@ -885,8 +901,6 @@ function readDiagram() {
 
         blocks.forEach(block => {
 
-            console.log(block.parentNode)
-
             if (block.classList.contains("CA") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "CA"
                 const idVar = block.querySelector(".select-var").value
@@ -914,8 +928,14 @@ function readDiagram() {
                 contandoPosicao+=3
             } else if (block.classList.contains("PA")) {
                 
+                const ant =(parseInt(block.parentNode.classList[0], 10)-1)
+
+                if(document.getElementsByClassName(`${ant}`)[0].childNodes.length == 0){
+                    ultimoParalelo = 0;
+                }
+
+
                 if(ultimoParalelo == 0){
-                    console.log('primeiro')
                     const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
                     diagram += "["
                     contandoPosicao++
@@ -924,7 +944,6 @@ function readDiagram() {
                     parals.forEach(paral => {
                         diagram += "("
                         contandoPosicao++
-                        console.log(paral)
     
                         if (paral.classList.contains("CA")) {
                             diagram += "CA"
@@ -939,7 +958,6 @@ function readDiagram() {
                         const idVar = paral.querySelector(".select-var").value
                         contandoPosicao+=3
                         posicaoUltimoParalalelo[i] = contandoPosicao
-                        console.log(posicaoUltimoParalalelo[i])
                         i++
 
                         diagram += idVar
@@ -957,8 +975,6 @@ function readDiagram() {
                     console.log('achou o outro')
                     const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
                     parals.forEach(paral => {
-
-                        console.log(paral)
 
                         if (paral.classList.contains("CA")) {
                             diagram = diagram.insert(posicaoUltimoParalalelo[j],"CA")

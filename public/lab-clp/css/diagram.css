@@ -145,3 +145,16 @@ div.dropBlockBoxParallel hr{
     z-index: -1000 !important;
     bottom: 21.5% !important;
 }
+
+/* deletar blocos */
+
+div.delete-block-area{
+    width: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    background-image: linear-gradient(rgba(255, 127, 127, 0),rgb(255, 127, 127));
+    z-index: -10000;
+    display: none;
+}
