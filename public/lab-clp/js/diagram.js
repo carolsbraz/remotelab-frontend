@@ -1023,7 +1023,6 @@ function sendData() {
     instance.post(`/plc/program/`, send, { params: { reference: localStorage.getItem("reference") } })
         .then((res) => {
             console.log("DIAGRAMA ENVIADO!", res)
-            window.location.href = "#abrirModalControles";
         }).catch((err) => {
             console.log("ERRO AO ENVIAR DIAGRAMA!", err.response)
         });
@@ -1051,7 +1050,6 @@ function reset(){
     instance.post(`/plc/program/control`, {control: "reset"}, { params: { reference: localStorage.getItem("reference") } })
     .then((res) => {
         console.log("RESETADO")
-        window.location.href = "#fechar";
     }).catch((err) => {
         console.log("ERRO AO PARAR EXECUÇÃO!", err.response)
     });
