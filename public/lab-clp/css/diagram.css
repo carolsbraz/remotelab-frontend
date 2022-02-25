@@ -177,3 +177,25 @@ div.controls button{
 div.controls button:hover{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.705);
 }
+
+div.data button{
+    margin: 0 auto;
+    background-color: var(--background-color);
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--main-green);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-green);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Inter';
+}
+
+div.data button svg{
+    margin-right: 10px;
+}
