@@ -7,8 +7,8 @@
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    height: 25px;
+    margin-left: -30px;
 
 }
 .btn:hover{
@@ -108,7 +108,6 @@
     cursor: pointer;
     height: 25px;
     margin-left: -30px;
-    margin-top: 25px;
 }
 .btn9:hover{
     background: rgb(139, 139, 139); 
@@ -150,6 +149,68 @@
     margin-top: 25px;
 }
 .btn12:hover{
+    background: rgb(139, 139, 139); 
+}
+.btn13{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn13:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn14{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn14:hover{
+    background: rgb(139, 139, 139); 
+}
+
+.btn15{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn15:hover{
+    background: rgb(139, 139, 139); 
+}
+.btn16{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn16:hover{
+    background: rgb(139, 139, 139); 
+}
+.btn17{
+    background: white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -30px;
+    margin-top: 25px;
+}
+.btn17:hover{
     background: rgb(139, 139, 139); 
 }
 /*----------------------------------modal---------------------*/
@@ -469,6 +530,140 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.modal13{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup13{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal14{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup14{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal15{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup15{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal16{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup16{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal17{
+    width: 100vh;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: animate;
+    animation-duration: 800ms;
+    position: fixed;
+    transform: translate(50%, 30%);
+}
+.popup17{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 .fechar{
     float: right;
     margin: 10px;
