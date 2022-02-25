@@ -1028,3 +1028,31 @@ function sendData() {
             console.log("ERRO AO ENVIAR DIAGRAMA!", err.response)
         });
 }
+
+function pausar(){
+    instance.post(`/plc/program/control`, {control: "pause"}, { params: { reference: localStorage.getItem("reference") } })
+    .then((res) => {
+        console.log("PAUSADO")
+    }).catch((err) => {
+        console.log("ERRO AO PAUSAR EXECUÇÃO!", err.response)
+    });
+}
+
+function resumir(){
+    instance.post(`/plc/program/control`, {control: "resume"}, { params: { reference: localStorage.getItem("reference") } })
+    .then((res) => {
+        console.log("RESUMIDO")
+    }).catch((err) => {
+        console.log("ERRO AO RESUMIR EXECUÇÃO!", err.response)
+    });
+}
+
+function reset(){
+    instance.post(`/plc/program/control`, {control: "reset"}, { params: { reference: localStorage.getItem("reference") } })
+    .then((res) => {
+        console.log("RESETADO")
+        window.location.href = "#fechar";
+    }).catch((err) => {
+        console.log("ERRO AO PARAR EXECUÇÃO!", err.response)
+    });
+}
