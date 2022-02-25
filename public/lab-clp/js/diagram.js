@@ -507,9 +507,9 @@ function addAnaIn(vari) {
         if (cont < divsNum) {
 
             if (handle.classList.contains('noUi-handle-invert')) {
-                domi += "1"
-            } else {
                 domi += "0"
+            } else {
+                domi += "1"
             }
             cont++
         }
