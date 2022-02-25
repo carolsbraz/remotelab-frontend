@@ -166,3 +166,70 @@ function fechar12(){
     let mymodal12 = document.querySelector('.popup12');
     mymodal12.style.display = 'none';
 }
+
+function abrir13(){
+    let modal13 = document.querySelector('.modal13');
+    modal13.style.display = 'block';
+    let mymodal13 = document.querySelector('.popup13');
+    mymodal13.style.display = 'block';
+}
+
+function fechar13(){
+    let modal13 = document.querySelector('.modal13');
+    modal13.style.display = 'none';
+    let mymodal13 = document.querySelector('.popup13');
+    mymodal13.style.display = 'none';
+}
+function abrir14(){
+    let modal14 = document.querySelector('.modal14');
+    modal14.style.display = 'block';
+    let mymodal14 = document.querySelector('.popup14');
+    mymodal14.style.display = 'block';
+}
+
+function fechar14(){
+    let modal14 = document.querySelector('.modal14');
+    modal14.style.display = 'none';
+    let mymodal14 = document.querySelector('.popup14');
+    mymodal14.style.display = 'none';
+}
+function abrir15(){
+    let modal15 = document.querySelector('.modal15');
+    modal15.style.display = 'block';
+    let mymodal15 = document.querySelector('.popup15');
+    mymodal15.style.display = 'block';
+}
+
+function fechar15(){
+    let modal15 = document.querySelector('.modal15');
+    modal15.style.display = 'none';
+    let mymodal15 = document.querySelector('.popup15');
+    mymodal15.style.display = 'none';
+}
+function abrir16(){
+    let modal16 = document.querySelector('.modal16');
+    modal16.style.display = 'block';
+    let mymodal16 = document.querySelector('.popup16');
+    mymodal16.style.display = 'block';
+}
+
+function fechar16(){
+    let modal16 = document.querySelector('.modal16');
+    modal16.style.display = 'none';
+    let mymodal16 = document.querySelector('.popup16');
+    mymodal16.style.display = 'none';
+}
+
+function abrir17(){
+    let modal17 = document.querySelector('.modal17');
+    modal17.style.display = 'block';
+    let mymodal17 = document.querySelector('.popup17');
+    mymodal17.style.display = 'block';
+}
+
+function fechar17(){
+    let modal17 = document.querySelector('.modal17');
+    modal17.style.display = 'none';
+    let mymodal17 = document.querySelector('.popup17');
+    mymodal17.style.display = 'none';
+}
