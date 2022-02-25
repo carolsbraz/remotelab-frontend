@@ -491,7 +491,7 @@ function addAnaIn(vari) {
 
     })
 
-    dataVar.extras.zones = zonesSelec.split("").reverse().join("")
+    dataVar.extras.zones = zonesSelec
 
     // dominancias
 
