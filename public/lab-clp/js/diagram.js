@@ -479,7 +479,7 @@ function addAnaIn(vari) {
 
     })
 
-    
+
 
     const selects = document.querySelectorAll('#valores select')
 
@@ -514,7 +514,7 @@ function addAnaIn(vari) {
             cont++
         }
     });
-    
+
     dataVar.extras.dominances = domi
 
     console.log(vari)
@@ -664,12 +664,47 @@ drag.forEach(block => {
             boxs.forEach(box => {
                 box.classList.add("dotted")
             })
+
+
         },
         onEnd: function (/**Event*/evt) {
             const boxs = document.querySelectorAll('div.dropBlockBox')
             boxs.forEach(box => {
                 box.classList.remove("dotted")
             })
+
+            console.log(evt)
+            if (evt.item.classList.contains('PA')) {
+                evt.item.style.display = "none"
+
+                const paralelo1 = document.createElement('div');
+                const paralelo2 = document.createElement('div');
+
+                const linha = document.createElement('hr');
+
+                console.log(linha)
+
+                paralelo1.classList.add('dropBlockBoxParallel')
+                paralelo2.classList.add('dropBlockBoxParallel')
+
+                paralelo1.appendChild(linha)
+                paralelo2.appendChild(linha)
+
+                evt.to.appendChild(paralelo1)
+                evt.to.appendChild(paralelo2)
+
+                new Sortable(paralelo1, {
+                    group: 'shared',
+                    animation: 150
+                });
+
+                new Sortable(paralelo2, {
+                    group: 'shared',
+                    animation: 150
+                });
+
+                evt.to.parentNode.querySelector('hr').style.bottom = "65%"
+            }
 
             updateSelects()
         },
@@ -827,19 +862,58 @@ function readDiagram() {
         const blocks = line.querySelectorAll('.dropBlockBox .block')
 
         blocks.forEach(block => {
-            if (block.classList.contains("CA")) {
+
+            console.log(block.parentNode)
+
+            if (block.classList.contains("CA") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "CA"
-            } else if (block.classList.contains("CF")) {
+                const idVar = block.querySelector(".select-var").value
+
+                diagram += idVar
+            } else if (block.classList.contains("CF") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "CF"
-            } else if (block.classList.contains("BA")) {
+                const idVar = block.querySelector(".select-var").value
+
+                diagram += idVar
+            } else if (block.classList.contains("BA") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "BA"
-            } else if (block.classList.contains("BF")) {
+                const idVar = block.querySelector(".select-var").value
+
+                diagram += idVar
+            } else if (block.classList.contains("BF") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "BF"
+                const idVar = block.querySelector(".select-var").value
+
+                diagram += idVar
+            } else if (block.classList.contains("PA")) {
+                const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
+                diagram += "["
+
+                parals.forEach(paral => {
+                    diagram += "("
+
+                    console.log(paral)
+
+                    if (paral.classList.contains("CA")) {
+                        diagram += "CA"
+                    } else if (paral.classList.contains("CF")) {
+                        diagram += "CF"
+                    } else if (paral.classList.contains("BA")) {
+                        diagram += "BA"
+                    } else if (paral.classList.contains("BF")) {
+                        diagram += "BF"
+                    }
+
+                    const idVar = paral.querySelector(".select-var").value
+
+                    diagram += idVar
+
+                    diagram += ")"
+                })
+                diagram += "]"
             }
 
-            const idVar = block.querySelector(".select-var").value
 
-            diagram += idVar
         })
 
         diagram += "}"

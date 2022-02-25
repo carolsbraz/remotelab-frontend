@@ -35,7 +35,7 @@ section div.data div.lines div.line hr{
     position: absolute;
     width: 100%;
     border: 3px solid #5C5C5C;
-    bottom: 51%;
+    bottom: 37%;
     z-index: -1000;
 }
 
@@ -132,4 +132,16 @@ div#valores-out{
 .drag-blocks .blocks .block #txt-CA-var, .drag-blocks .blocks .block #txt-CF-var,
 .drag-blocks .blocks .block #txt-BA-var, .drag-blocks .blocks .block #txt-BF-var{
     display: none;
+}
+
+.dropBlockBoxParallel{
+    height: 71.5px;
+}
+
+div.dropBlockBoxParallel hr{
+    background-color: #5C5C5C !important; 
+    width: 79px !important;
+    border: 3px solid #5C5C5C !important;
+    z-index: -1000 !important;
+    bottom: 21.5% !important;
 }
