@@ -1,0 +1,13 @@
+/*Tablet*/
+@media (max-width: 768px) {
+    section{
+        flex-direction: row !important;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 600px) {
+    section{
+        flex-direction: column !important;
+    }
+}
