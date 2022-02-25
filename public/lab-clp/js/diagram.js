@@ -644,7 +644,7 @@ function addVar() {
         }
         console.log(send)
     }
-
+    updateSelects()
 }
 
 const drag = document.querySelectorAll('div.blocks')
@@ -846,6 +846,20 @@ function updateSelects() {
     })
 }
 
+// add int he middle of the string
+
+String.prototype.insert = function(index, string) {
+    if (index > 0) {
+      return this.substring(0, index) + string + this.substr(index);
+    }
+  
+    return string + this;
+  };
+  
+  //Example of use:
+  var something = "How you?";
+  something = something.insert(3, " are");
+  console.log(something)
 
 // read diagram 
 
@@ -854,10 +868,18 @@ function readDiagram() {
 
     var diagram = ""
 
+    var ultimoParalelo = 0;
+    
+    var posicaoUltimoParalalelo = []
+
+    var contandoPosicao = 0;
+
+
     const lines = document.querySelectorAll('.lines .line ')
     lines.forEach(line => {
 
         diagram += "{"
+        contandoPosicao++
 
         const blocks = line.querySelectorAll('.dropBlockBox .block')
 
@@ -868,56 +890,109 @@ function readDiagram() {
             if (block.classList.contains("CA") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "CA"
                 const idVar = block.querySelector(".select-var").value
-
+                ultimoParalelo = 0
                 diagram += idVar
+                contandoPosicao+=3
+                
             } else if (block.classList.contains("CF") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "CF"
                 const idVar = block.querySelector(".select-var").value
-
+                ultimoParalelo = 0
                 diagram += idVar
+                contandoPosicao+=3
             } else if (block.classList.contains("BA") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "BA"
                 const idVar = block.querySelector(".select-var").value
-
+                ultimoParalelo = 0
                 diagram += idVar
+                contandoPosicao+=3
             } else if (block.classList.contains("BF") && !(block.parentNode.classList.contains("dropBlockBoxParallel"))) {
                 diagram += "BF"
                 const idVar = block.querySelector(".select-var").value
-
+                ultimoParalelo = 0
                 diagram += idVar
+                contandoPosicao+=3
             } else if (block.classList.contains("PA")) {
-                const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
-                diagram += "["
+                
+                if(ultimoParalelo == 0){
+                    console.log('primeiro')
+                    const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
+                    diagram += "["
+                    contandoPosicao++
+                    var i = 0
 
-                parals.forEach(paral => {
-                    diagram += "("
+                    parals.forEach(paral => {
+                        diagram += "("
+                        contandoPosicao++
+                        console.log(paral)
+    
+                        if (paral.classList.contains("CA")) {
+                            diagram += "CA"
+                        } else if (paral.classList.contains("CF")) {
+                            diagram += "CF"
+                        } else if (paral.classList.contains("BA")) {
+                            diagram += "BA"
+                        } else if (paral.classList.contains("BF")) {
+                            diagram += "BF"
+                        }
+                        
+                        const idVar = paral.querySelector(".select-var").value
+                        contandoPosicao+=3
+                        posicaoUltimoParalalelo[i] = contandoPosicao
+                        console.log(posicaoUltimoParalalelo[i])
+                        i++
 
-                    console.log(paral)
+                        diagram += idVar
+    
+                        diagram += ")"
+                        contandoPosicao++
+                    })
+                    diagram += "]"
+                    contandoPosicao++
+                    ultimoParalelo = 1;
+                }else{
 
-                    if (paral.classList.contains("CA")) {
-                        diagram += "CA"
-                    } else if (paral.classList.contains("CF")) {
-                        diagram += "CF"
-                    } else if (paral.classList.contains("BA")) {
-                        diagram += "BA"
-                    } else if (paral.classList.contains("BF")) {
-                        diagram += "BF"
-                    }
+                    var j = 0
 
-                    const idVar = paral.querySelector(".select-var").value
+                    console.log('achou o outro')
+                    const parals = block.parentNode.querySelectorAll('.dropBlockBoxParallel .block')
+                    parals.forEach(paral => {
 
-                    diagram += idVar
+                        console.log(paral)
 
-                    diagram += ")"
-                })
-                diagram += "]"
+                        if (paral.classList.contains("CA")) {
+                            diagram = diagram.insert(posicaoUltimoParalalelo[j],"CA")
+                        } else if (paral.classList.contains("CF")) {
+                            diagram = diagram.insert(posicaoUltimoParalalelo[j],"CF")
+                        } else if (paral.classList.contains("BA")) {
+                            diagram = diagram.insert(posicaoUltimoParalalelo[j],"BA")
+                        } else if (paral.classList.contains("BF")) {
+                            diagram = diagram.insert(posicaoUltimoParalalelo[j],"BF")
+                        }
+                        
+                        const idVar = paral.querySelector(".select-var").value
+
+                        diagram = diagram.insert(posicaoUltimoParalalelo[j]+2,idVar)
+
+                        contandoPosicao+=3
+                        
+                        j++
+
+                        posicaoUltimoParalalelo[j] = posicaoUltimoParalalelo[j]+3
+                        
+                        
+                        ultimoParalelo = 1;
+                    })
+                }
+                
+                
             }
 
 
         })
 
         diagram += "}"
-
+contandoPosicao++
     })
 
     return diagram
