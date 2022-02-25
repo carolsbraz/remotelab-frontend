@@ -674,7 +674,7 @@ drag.forEach(block => {
             })
 
             console.log(evt)
-            if (evt.item.classList.contains('PA')) {
+            if (evt.item.classList.contains('PA') && !(evt.to.classList.contains('blocks')) ) {
                 evt.item.style.display = "none"
 
                 const paralelo1 = document.createElement('div');
@@ -755,7 +755,6 @@ function newLine() {
         new Sortable(dropBlock, {
             group: 'shared',
             animation: 150,
-            filter: ".dropBlockBoxParallel .block",
             onStart: function (/**Event*/evt) {
                 document.getElementById('delete-block-area').style.display = 'unset'
             },
@@ -1024,6 +1023,7 @@ function sendData() {
     instance.post(`/plc/program/`, send, { params: { reference: localStorage.getItem("reference") } })
         .then((res) => {
             console.log("DIAGRAMA ENVIADO!", res)
+            window.location.href = "#abrirModalControles";
         }).catch((err) => {
             console.log("ERRO AO ENVIAR DIAGRAMA!", err.response)
         });
