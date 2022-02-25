@@ -1,3 +1,5 @@
+
+
 module.exports = (app) => {
 
     app.get('/', (req, res) => {
@@ -18,8 +20,12 @@ module.exports = (app) => {
 
      // fpga 
 
+
      app.get('/program', (req, res) =>{
         res.render("lab-fpga/program-fpga")
+    });
+    app.get('/camera', (req, res) =>{
+        res.render("lab-fpga/camera")
     });
     app.get('/user-fpga', (req, res) =>{
         res.render("lab-fpga/user-fpga")
