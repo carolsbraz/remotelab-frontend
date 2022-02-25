@@ -472,7 +472,7 @@ function addAnaIn(vari) {
 
         if (contador < divsNum) {
 
-            dataVar.extras.divs.push(div.innerText)
+            dataVar.extras.divs.push(parseInt(div.innerText))
 
             contador++
         }
@@ -499,14 +499,20 @@ function addAnaIn(vari) {
 
     const handles = document.querySelectorAll('.noUi-handle')
 
+    var cont = 0
+
+
     handles.forEach(handle => {
+
+        if (cont < divsNum) {
 
             if (handle.classList.contains('noUi-handle-invert')) {
                 domi += "1"
             } else {
                 domi += "0"
             }
-
+            cont++
+        }
     });
     
     dataVar.extras.dominances = domi
