@@ -703,7 +703,7 @@ drag.forEach(block => {
                     animation: 150
                 });
 
-                evt.to.parentNode.querySelector('hr').style.bottom = "65%"
+                evt.to.parentNode.querySelector('hr').style.bottom = "65.5%"
             }
 
             updateSelects()
